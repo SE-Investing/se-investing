@@ -10,7 +10,7 @@ const iconMap = {
   'clipboard-check': ClipboardCheck,
 };
 
-const serviceImages = ['./assets/construction-1.jpg', './assets/maintenance/construction-2.jpg', './assets/construction-3.jpeg', './assets/construction-4.jpeg'];
+const serviceImages = ['../assets/construction-1.jpg', '../assets/maintenance/construction-2.jpg', '../assets/construction-3.jpeg', '../assets/construction-4.jpeg'];
 
 const ServicesSection = () => {
   const { content } = useLanguage();
@@ -54,7 +54,7 @@ const ServicesSection = () => {
             <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex flex-row items-center gap-0 relative overflow-hidden">
               <div className="w-1/2 h-full flex items-center">
                 <img
-                  src="/assets/construction/brasil/2011, vila quinta das lagoas casa 2.jpeg"
+                  src="./assets/construction/brasil/2011, vila quinta das lagoas casa 2.jpeg"
                   alt="2011, Vila Quinta das Lagoas Casa 2"
                   className="object-cover w-full h-full rounded-l-xl"
                   style={{ maskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)' }}
@@ -76,7 +76,7 @@ const ServicesSection = () => {
             <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex flex-row items-center gap-0 relative overflow-hidden">
               <div className="w-1/2 h-full flex items-center">
                 <img
-                  src="/assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM.jpeg"
+                  src="./assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM.jpeg"
                   alt="Nuove Costruzioni e ristrutturazioni"
                   className="object-cover w-full h-full rounded-l-xl"
                   style={{ objectPosition: 'center 20%', maskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)' }}
@@ -99,7 +99,7 @@ const ServicesSection = () => {
             <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex flex-row items-center gap-0 relative overflow-hidden">
               <div className="w-1/2 h-full flex items-center">
                 <img
-                  src="/assets/complexes/villa%20quinta%20das%20lagoas.jpg"
+                  src="./assets/complexes/villa%20quinta%20das%20lagoas.jpg"
                   alt="Macchinari e Mezzi"
                   className="object-cover w-full h-full rounded-l-xl"
                   style={{ maskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)' }}
@@ -119,7 +119,7 @@ const ServicesSection = () => {
             <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex flex-row items-center gap-0 relative overflow-hidden">
               <div className="w-1/2 h-full flex items-center">
                 <img
-                  src="/assets/complexes/itacimirim obra.jpg"
+                  src="./assets/complexes/itacimirim obra.jpg"
                   alt="Solar Cinesi Germ"
                   className="object-cover w-full h-full rounded-l-xl"
                   style={{ maskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)' }}
