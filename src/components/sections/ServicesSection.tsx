@@ -48,9 +48,9 @@ const ServicesSection = () => {
   return (
     <>
       <section id="services" className="relative w-full flex items-stretch overflow-hidden">
-  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start justify-center md:pt-8 px-0">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:gap-4 md:grid-cols-2 items-start justify-center md:pt-8 px-0">
           {/* Card 1 */}
-          <div className="flex justify-start items-center w-full min-w-[400px] mb-8">
+          <div className="flex justify-start items-center w-full min-w-[400px] mb-2">
             <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex flex-row items-center gap-0 relative overflow-hidden">
               <div className="w-1/2 h-full flex items-center">
                 <img
@@ -72,7 +72,7 @@ const ServicesSection = () => {
             </div>
           </div>
           {/* Card 2 */}
-          <div className="flex justify-start items-center w-full min-w-[400px] mb-8">
+          <div className="flex justify-start items-center w-full min-w-[400px] mb-2 md:mb-4">
             <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex flex-row items-center gap-0 relative overflow-hidden">
               <div className="w-1/2 h-full flex items-center">
                 <img
@@ -95,7 +95,7 @@ const ServicesSection = () => {
             </div>
           </div>
           {/* Card 3 */}
-          <div className="flex justify-start items-center w-full min-w-[400px] mb-8">
+          <div className="flex justify-start items-center w-full min-w-[400px] mb-2">
             <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex flex-row items-center gap-0 relative overflow-hidden">
               <div className="w-1/2 h-full flex items-center">
                 <img
@@ -115,7 +115,7 @@ const ServicesSection = () => {
             </div>
           </div>
           {/* Card 4 */}
-          <div className="flex justify-start items-center w-full min-w-[400px] mb-8">
+          <div className="flex justify-start items-center w-full min-w-[400px] mb-2">
             <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex flex-row items-center gap-0 relative overflow-hidden">
               <div className="w-1/2 h-full flex items-center">
                 <img
