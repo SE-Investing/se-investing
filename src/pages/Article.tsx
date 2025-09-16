@@ -16,7 +16,7 @@ function OfferQuoteSection() {
   const isEnglish = language === 'en';
   return (
     <div className={showForm
-      ? "mb-8 p-6 bg-gradient-to-br from-[#00338D] to-[#0066CC] border border-primary rounded-lg shadow flex flex-col items-center"
+      ? "mb-8 p-6 bg-gradient-to-br from-[#7c6714] to-[#0066CC] border border-primary rounded-lg shadow flex flex-col items-center"
       : "mb-8 p-6 bg-white/80 border border rounded-lg shadow flex flex-col items-center"}
     >
       <p className={showForm ? "text-base text-white mb-4 text-center" : "text-base text-primary/80 mb-4 text-center"}>

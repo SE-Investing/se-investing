@@ -48,7 +48,7 @@ const ServicesSection = () => {
   return (
     <>
       <section id="services" className="relative w-full flex items-stretch overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 gap-8 items-start justify-center md:pt-8 px-0">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start justify-center md:pt-8 px-0">
           {/* Card 1 */}
           <div className="flex justify-start items-center w-full min-w-[400px] mb-8">
             <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex flex-row items-center gap-0 relative overflow-hidden">
@@ -61,8 +61,8 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full">
-                <h3 className="text-4xl md:text-4xl font-light mb-4 mt-2 text-[#00338D] drop-shadow-lg">Studi di fattibilità e progettazione</h3>
-                <p className="font-normal text-left text-xl mb-2 text-[#00338D] w-full">Studi di fattibilità economica e progettazione tecnica</p>
+                <h3 className="text-4xl md:text-4xl font-light mb-4 mt-2 text-[#7c6714] drop-shadow-lg">Studi di fattibilità e progettazione</h3>
+                <p className="font-normal text-left text-xl mb-2 text-[#7c6714] w-full">Studi di fattibilità economica e progettazione tecnica</p>
                 <div className="text-gray-800 text-justify [word-spacing:-1.5px] text-lg leading-relaxed text-left w-full">
                   <p className="mb-2 text-justify">- H2</p>
                   <p className="mb-2 text-justify">- Funivia</p>
@@ -83,8 +83,8 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full">
-                <h2 className="mt-2 text-4xl md:text-4xl text-left font-light mb-4 text-[#00338D] drop-shadow-lg">nuove Costruzioni e ristrutturazioni</h2>
-                <p className="font-normal text-left text-xl mb-2 text-[#00338D] mb-2">Realizzazione e manutenzione</p>
+                <h2 className="mt-2 text-4xl md:text-4xl text-left font-light mb-4 text-[#7c6714] drop-shadow-lg">nuove Costruzioni e ristrutturazioni</h2>
+                <p className="font-normal text-left text-xl mb-2 text-[#7c6714] mb-2">Realizzazione e manutenzione</p>
                 <div className="text-gray-800 text-lg leading-relaxed text-justify [word-spacing:-1.5px] w-full font-extralight mb-2">
                   <p className="mb-2 text-justify">- Teme</p>
                   <p className="mb-2 text-justify">- Basi</p>
@@ -106,7 +106,7 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full">
-                <h3 className="text-4xl md:text-4xl font-light mb-4 mt-2 text-[#00338D] drop-shadow-lg">Macchinari e Mezzi</h3>
+                <h3 className="text-4xl md:text-4xl font-light mb-4 mt-2 text-[#7c6714] drop-shadow-lg">Macchinari e Mezzi</h3>
                 <div className="text-gray-800 text-justify [word-spacing:-1.5px] text-lg leading-relaxed text-left w-full">
                   <p className="mb-2 text-justify">- Rifiuti green thesis</p>
                   <p className="mb-2 text-justify">- Uomo fratello algo</p>
@@ -126,7 +126,7 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full">
-                <h2 className="mt-2 text-4xl md:text-4xl text-left font-light mb-4 text-[#00338D] drop-shadow-lg">Solar Cinesi Germ</h2>
+                <h2 className="mt-2 text-4xl md:text-4xl text-left font-light mb-4 text-[#7c6714] drop-shadow-lg">Solar Cinesi Germ</h2>
               </div>
             </div>
           </div>
