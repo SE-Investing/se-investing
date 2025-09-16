@@ -66,11 +66,11 @@ const ModernNavigation = () => {
   };
 
   const navigationItems = [
-    { key: "projects", label: content.navigation.projects, href: '/#projects' },
-    { key: "services", label: content.navigation.services, href: '/#services' },
-    { key: "about", label: content.navigation.about, href: '/#about' },
-    { key: "articles", label: content.navigation.articles, href: "/magazine" },
-    { key: "contact", label: content.navigation.contact, href: '/#contact'},
+    { key: "projects", label: content.navigation.projects, href: '/se-investing/#projects' },
+    { key: "services", label: content.navigation.services, href: '/se-investing/#services' },
+    { key: "about", label: content.navigation.about, href: '/se-investing/#about' },
+    { key: "articles", label: content.navigation.articles, href: "/se-investing/magazine" },
+    { key: "contact", label: content.navigation.contact, href: '/se-investing/#contact'},
   ];
 
   return (
@@ -97,7 +97,7 @@ const ModernNavigation = () => {
                 <a
                   key={item.key}
                   href={href}
-                  className="text-foreground/80 transition-colors font-medium text-md tracking-wide hover:text-[#FFAA00] text-[#B39E1E] focus:text-[#FFAA00]"
+                  className="text-[#aaa116f2] transition-colors font-medium text-md tracking-wide hover:text-[#FFAA00] text-[#B39E1E] focus:text-[#FFAA00]"
                 >
                   {item.label}
                 </a>

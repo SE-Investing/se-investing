@@ -50,14 +50,14 @@ const SustainabilitySection = () => {
           <path d="M0,80 C90,110 60,0 1440,90 L10940,0 L0,0 Z" fill="#ffffffff" />
         </svg>
         <div className="absolute inset-0 flex mt-10 justify-center items-center h-full">
-          <h3 className="text-4xl font-light text-[#3a4a5a] leading-tight z-10 text-left px-4" style={{marginTop: '32px'}}>
+          <h3 className="text-4xl font-light text-[#7c6714] leading-tight z-10 text-left px-4" style={{marginTop: '32px'}}>
             Un occhio di riguardo all'ambiente 
           </h3>
         </div>
       </div>
       {/* Mobile heading only */}
       <div className="sm:hidden w-full flex justify-center items-center">
-        <h3 className="text-3xl md:text-4xl font-light md:mb-6 text-[#00338D] drop-shadow-lg px-4 pt-2" style={{marginTop: '24px'}}>
+        <h3 className="text-3xl md:text-4xl font-light md:mb-6 text-[#7c6714] drop-shadow-lg px-4 pt-2" style={{marginTop: '24px'}}>
           Un occhio di riguardo all'ambiente 
         </h3>
       </div>

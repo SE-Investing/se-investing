@@ -1,8 +1,8 @@
-import React, { createContext, useContext, useState } from 'react';
-import contentData from '@/data/content.json';
-import articlesData from '@/data/articles.json';
+import React, { createContext, useContext, useState } from "react";
+import contentData from "@/data/content.json";
+import articlesData from "@/data/articles.json";
 
-type Language = 'it' | 'en';
+type Language = "it" | "en";
 
 type ProjectType = {
   title: string;
@@ -23,13 +23,13 @@ type ProjectType = {
 };
 
 type ContentDataType = {
-  it: Omit<typeof contentData.it, 'projectsScroll'> & {
-    projectsScroll: Omit<typeof contentData.it.projectsScroll, 'projects'> & {
+  it: Omit<typeof contentData.it, "projectsScroll"> & {
+    projectsScroll: Omit<typeof contentData.it.projectsScroll, "projects"> & {
       projects: ProjectType[];
     };
   };
-  en: Omit<typeof contentData.en, 'projectsScroll'> & {
-    projectsScroll: Omit<typeof contentData.en.projectsScroll, 'projects'> & {
+  en: Omit<typeof contentData.en, "projectsScroll"> & {
+    projectsScroll: Omit<typeof contentData.en.projectsScroll, "projects"> & {
       projects: ProjectType[];
     };
   };
@@ -50,7 +50,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('it');
+  const [language, setLanguage] = useState<Language>("it");
 
   const content = contentData[language];
   const articles = articlesData[language];
@@ -66,7 +66,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+    throw new Error("useLanguage must be used within a LanguageProvider");
   }
   return context;
 };

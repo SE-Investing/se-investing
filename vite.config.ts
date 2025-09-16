@@ -7,7 +7,10 @@ export default defineConfig(({ mode }) => ({
   base: mode === "development" ? "" : "/se-investing/",
   server: {
     host: "::",
-    port: 8080,
+    port: 8081,
+    fs: {
+        allow: [".."],
+    },
   },
   plugins: [
     react()
