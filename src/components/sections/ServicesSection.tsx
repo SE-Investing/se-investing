@@ -1,16 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Building, Wrench, Construction, ClipboardCheck, Users, Leaf } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-
-const iconMap = {
-  building: Building,
-  wrench: Wrench,
-  construction: Construction,
-  'clipboard-check': ClipboardCheck,
-};
-
-const serviceImages = ['../assets/construction-1.jpg', '../assets/maintenance/construction-2.jpg', '../assets/construction-3.jpeg', '../assets/construction-4.jpeg'];
 
 const ServicesSection = () => {
   const { content } = useLanguage();
