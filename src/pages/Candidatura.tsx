@@ -10,12 +10,9 @@ export default function CandidaturaPage() {
     nome: "",
     cognome: "",
     email: "",
-    dataNascita: "",
-    genere: "",
     telefono: "",
     indirizzo: "",
     domande: "",
-    cv: null as File | null,
     privacy: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -36,7 +33,7 @@ export default function CandidaturaPage() {
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData((prev) => ({ ...prev, cv: e.target.files ? e.target.files[0] : null }));
+  // Removed CV upload
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -62,23 +59,14 @@ export default function CandidaturaPage() {
     }
 
     let data: any = {
-      nome: formData.nome,
-      cognome: formData.cognome,
-      email: formData.email,
-      dataNascita: formData.dataNascita,
-      genere: formData.genere,
-      telefono: formData.telefono,
-      indirizzo: formData.indirizzo,
-      domande: formData.domande,
-      cv: '',
+  nome: formData.nome,
+  cognome: formData.cognome,
+  email: formData.email,
+  telefono: formData.telefono,
+  indirizzo: formData.indirizzo,
+  domande: formData.domande,
     };
-    if (formData.cv instanceof File) {
-      data.cv = JSON.stringify({
-        name: formData.cv.name,
-        type: formData.cv.type,
-        content: await fileToBase64(formData.cv),
-      });
-    }
+  // Removed CV upload block
 
     // Serialize as x-www-form-urlencoded
     const params = Object.keys(data)
@@ -99,12 +87,9 @@ export default function CandidaturaPage() {
           nome: "",
           cognome: "",
           email: "",
-          dataNascita: "",
-          genere: "",
           telefono: "",
           indirizzo: "",
           domande: "",
-          cv: null,
           privacy: false,
         });
         setIsSubmitting(false);
@@ -125,7 +110,7 @@ export default function CandidaturaPage() {
               Torna alla home
             </a>
             <h1 className="text-3xl md:text-4xl font-editorial text-foreground mb-8">
-              Invia la tua candidatura
+              Contact us
             </h1>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -137,26 +122,9 @@ export default function CandidaturaPage() {
                   <label className="block text-gray-700 mb-1">Cognome</label>
                   <input name="cognome" value={formData.cognome} onChange={handleInputChange} className="w-full rounded-lg bg-gray-50 border border-gray-100 p-3" />
                 </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
                   <label className="block text-gray-700 mb-1">Indirizzo Email <span className="text-red-500">*</span></label>
                   <input name="email" type="email" value={formData.email} onChange={handleInputChange} required className="w-full rounded-lg bg-gray-50 border border-gray-100 p-3" />
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-1">Data di nascita</label>
-                  <input name="dataNascita" type="date" value={formData.dataNascita} onChange={handleInputChange} className="w-full rounded-lg bg-gray-50 border border-gray-100 p-3" />
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-1">Genere</label>
-                  <div className="flex gap-4 mt-2">
-                    <label className="flex items-center gap-2">
-                      <input type="radio" name="genere" value="Maschio" checked={formData.genere === 'Maschio'} onChange={handleInputChange} /> Maschio
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input type="radio" name="genere" value="Femmina" checked={formData.genere === 'Femmina'} onChange={handleInputChange} /> Femmina
-                    </label>
-                  </div>
                 </div>
                 <div>
                   <label className="block text-gray-700 mb-1">Numero di telefono</label>
@@ -170,10 +138,6 @@ export default function CandidaturaPage() {
               <div>
                 <label className="block text-gray-700 mb-1">Domande</label>
                 <textarea name="domande" value={formData.domande} onChange={handleInputChange} className="w-full rounded-lg bg-gray-50 border border-gray-100 p-3 min-h-[100px]" />
-              </div>
-              <div>
-                <label className="block text-gray-700 mb-1">Carica il tuo CV</label>
-                <input type="file" accept=".pdf,.doc,.docx" onChange={handleFileChange} className="block" />
               </div>
               <div className="flex items-center gap-2">
                 <input type="checkbox" name="privacy" checked={formData.privacy} onChange={handleInputChange} required />
