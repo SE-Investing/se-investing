@@ -65,10 +65,10 @@ const SustainabilitySection = () => {
         <div className="flex-1 flex flex-col justify-top">
           {/* Heading moved above in curved SVG */}
           <p className="text-gray-700 text-justify [word-spacing:-1.5px] font-light mb-2 leading-relaxed text-lg">
-            Possiamo tenere traccia sia a preventivo che a consuntivo dell’impatto ambientale delle commesse, possiamo utilizzare solo materiali sostenibili certificati ove richiesto e gestire la tracciabilità di filiera.
+            Se Investing ci tiene davvero all’ambiente, può tenere traccia sia a preventivo che a consuntivo dell’impatto ambientale delle commesse. Può utilizzare solo materiali sostenibili certificati ove richiesto e gestire la tracciabilità di filiera.
           </p>
           <p className="text-gray-700 text-justify [word-spacing:-1.5px] font-light leading-relaxed text-lg">
-            Per bilanciare l’impatto ambientale le emissioni misurate possono essere successivamente compensate su richiesta dei clienti tramite progetti di  riforestazione grazie alla partnership con diverse organizzazioni specializzate.
+            Per bilanciare l’impatto ambientale, le emissioni misurate possono essere successivamente compensate — su richiesta dei clienti — tramite progetti di riforestazione, grazie alla partnership con diverse organizzazioni specializzate.
           </p>
         </div>
         <div className="flex-1 flex justify-center items-center w-full">

@@ -32,9 +32,6 @@ const Footer = () => {
                 <span className="text-background/80">{content.footer.address}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-background/80">{content.footer.address_second}</span>
-              </div>
-              <div className="flex items-center space-x-2">
                 <span className="text-background/80">{content.footer.registration}</span>
               </div>
               <div className="flex items-center space-x-2">

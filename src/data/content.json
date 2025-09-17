@@ -239,9 +239,8 @@
       }
     },
     "footer": {
-      "company": "S.E. Investing SARL (AU)",
-      "address": "La commune de Sidi El Mokhtar",
-      "address_second": "Chichaoua Marrakech",
+      "company": "S.E. Investing SARL",
+      "address": "Province of Chichaoua, Marrakech",
       "fiscalCode": "Codice fiscale e numero di iscrizione al registro imprese: 02755460223",
       "registration": "IF-25082582-RC:1169-TP 47830024",
       "phone": "+39 0461 123456",
@@ -256,7 +255,7 @@
         "terms": "Termini e Condizioni",
         "certifications": "Certificazioni"
       },
-      "copyright": "Tutti i diritti riservati da S.E.Investing SARL (AU), sviluppato da Sintija Birgele."
+      "copyright": "Tutti i diritti riservati da S.E.Investing SARL, sviluppato da Sintija Birgele."
     }
   },
   "en": {
