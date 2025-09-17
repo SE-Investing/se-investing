@@ -6,13 +6,6 @@ import { gsap } from "gsap";
 // Helper to get all images in a folder (publicassets/*)
 const assetFolders = ["builders", "commercial", "maintenance", "roofing", "underfloor"];
 const assetImages: Record<string, string[]> = {
-  "complexes": [
-      "assets/complexes/vitacimirim obra.jpg",
-      "assets/complexes/villa quinta das lagoas.jpg",
-      "assets/complexes/paulo afonso obra.jpg",
-      "assets/complexes/paulo afonso.jpg",
-      "assets/complexes/itacimirim obra 1.jpg",
-    ],
     "construction/brasil": [
       "assets/construction/brasil/itacimirim obra.jpg",
       "assets/construction/brasil/paulo afonso obra.jpg",

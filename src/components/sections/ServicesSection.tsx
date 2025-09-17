@@ -54,7 +54,7 @@ const ServicesSection = () => {
             <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex flex-row items-center gap-0 relative overflow-hidden">
               <div className="w-1/2 h-full flex items-center">
                 <img
-                  src="./assets/construction/brasil/2011, vila quinta das lagoas casa 2.jpeg"
+                  src="./assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2011, vila quinta das lagoas casa 2.jpeg"
                   alt="2011, Vila Quinta das Lagoas Casa 2"
                   className="object-cover w-full h-full rounded-l-xl"
                   style={{ maskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)' }}
@@ -74,7 +74,7 @@ const ServicesSection = () => {
             <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex flex-row items-center gap-0 relative overflow-hidden">
               <div className="w-1/2 h-full flex items-center">
                 <img
-                  src="./assets/complexes/itacimirim obra.jpg"
+                  src="assets/construction/brasil/itacimirim obra.jpg"
                   alt="Solar Cinesi Germ"
                   className="object-cover w-full h-full rounded-l-xl"
                   style={{ maskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)' }}
