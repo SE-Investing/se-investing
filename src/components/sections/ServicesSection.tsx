@@ -61,61 +61,16 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full">
-                <h3 className="text-4xl md:text-4xl font-light mb-4 mt-2 text-[#7c6714] drop-shadow-lg">Studi di fattibilità e progettazione</h3>
+                <h3 className="text-4xl md:text-4xl font-light mb-4 mt-2 text-[#7c6714] drop-shadow-lg">La mission</h3>
                 <p className="font-normal text-left text-xl mb-2 text-[#7c6714] w-full">Studi di fattibilità economica e progettazione tecnica</p>
                 <div className="text-gray-800 text-justify [word-spacing:-1.5px] text-lg leading-relaxed text-left w-full">
-                  <p className="mb-2 text-justify">- H2</p>
-                  <p className="mb-2 text-justify">- Funivia</p>
-                  <p className="mb-2 text-justify" ref={endRef}>- Turismo canane Brasile</p>
+                  <p className="mb-2 text-justify">Portare competenze nel mondo delle infrastrutture e delle tecnologie sostenibili.Ogni progetto è un passo avanti per un’economia più sostenibile. Da qui il nome S “Sustainable” E “Economy” Investing.</p>
                 </div>
               </div>
             </div>
           </div>
           {/* Card 2 */}
           <div className="flex justify-start items-center w-full min-w-[400px] mb-2 md:mb-4">
-            <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex flex-row items-center gap-0 relative overflow-hidden">
-              <div className="w-1/2 h-full flex items-center">
-                <img
-                  src="./assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM.jpeg"
-                  alt="Nuove Costruzioni e ristrutturazioni"
-                  className="object-cover w-full h-full rounded-l-xl"
-                  style={{ objectPosition: 'center 20%', maskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)' }}
-                />
-              </div>
-              <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full">
-                <h2 className="mt-2 text-4xl md:text-4xl text-left font-light mb-4 text-[#7c6714] drop-shadow-lg">nuove Costruzioni e ristrutturazioni</h2>
-                <p className="font-normal text-left text-xl mb-2 text-[#7c6714] mb-2">Realizzazione e manutenzione</p>
-                <div className="text-gray-800 text-lg leading-relaxed text-justify [word-spacing:-1.5px] w-full font-extralight mb-2">
-                  <p className="mb-2 text-justify">- Teme</p>
-                  <p className="mb-2 text-justify">- Basi</p>
-                  <p className="mb-2 text-justify">- SAL</p>
-                  <p className="mb-2 text-justify">- Manut. ospedali Africa</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Card 3 */}
-          <div className="flex justify-start items-center w-full min-w-[400px] mb-2">
-            <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex flex-row items-center gap-0 relative overflow-hidden">
-              <div className="w-1/2 h-full flex items-center">
-                <img
-                  src="./assets/complexes/villa%20quinta%20das%20lagoas.jpg"
-                  alt="Macchinari e Mezzi"
-                  className="object-cover w-full h-full rounded-l-xl"
-                  style={{ maskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)' }}
-                />
-              </div>
-              <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full">
-                <h3 className="text-4xl md:text-4xl font-light mb-4 mt-2 text-[#7c6714] drop-shadow-lg">Macchinari e Mezzi</h3>
-                <div className="text-gray-800 text-justify [word-spacing:-1.5px] text-lg leading-relaxed text-left w-full">
-                  <p className="mb-2 text-justify">- Rifiuti green thesis</p>
-                  <p className="mb-2 text-justify">- Uomo fratello algo</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Card 4 */}
-          <div className="flex justify-start items-center w-full min-w-[400px] mb-2">
             <div className="backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex flex-row items-center gap-0 relative overflow-hidden">
               <div className="w-1/2 h-full flex items-center">
                 <img
@@ -126,7 +81,10 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full">
-                <h2 className="mt-2 text-4xl md:text-4xl text-left font-light mb-4 text-[#7c6714] drop-shadow-lg">Solar Cinesi Germ</h2>
+                <h2 className="mt-2 text-4xl md:text-4xl text-left font-light mb-4 text-[#7c6714] drop-shadow-lg">Organizzazione e efficienza tramite digitale</h2>
+                <div className="text-gray-800 text-lg leading-relaxed text-justify [word-spacing:-1.5px] w-full font-extralight mb-2">
+                  <p className="mb-2 text-justify">Grazie ad un apposito sistema informatico AI interno interconnesso con gli hardware di cantiere possiamo tenere traccia delle lavorazioni quotidiane, tenere aggiornato il cliente anche a distanza tramite condivisione cloud facilitare il controllo di gestione e individuare eventuali scostamenti rispetto al cronoprogramma.</p>
+                </div>
               </div>
             </div>
           </div>

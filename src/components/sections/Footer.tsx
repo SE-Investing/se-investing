@@ -31,9 +31,12 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 pt-1 text-background/80" />
                 <span className="text-background/80">{content.footer.address}</span>
               </div>
-              {/* <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2">
+                <span className="text-background/80">{content.footer.address_second}</span>
+              </div>
+              <div className="flex items-center space-x-2">
                 <span className="text-background/80">{content.footer.registration}</span>
-              </div> */}
+              </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-background/80" />
                 <span className="text-background/80">{content.footer.email}</span>

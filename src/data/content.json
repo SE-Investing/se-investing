@@ -249,9 +249,10 @@
     },
     "footer": {
       "company": "S.E. Investing SARL (AU)",
-      "address": "La commune de Sidi El Mokhtar, Chichaoua Marrakech",
+      "address": "La commune de Sidi El Mokhtar",
+      "address_second": "Chichaoua Marrakech",
       "fiscalCode": "Codice fiscale e numero di iscrizione al registro imprese: 02755460223",
-      "registration": "Iscrizione al Registro degli Enti Cooperativi: Numero C142156",
+      "registration": "IF-25082582-RC:1169-TP 47830024",
       "phone": "+39 0461 123456",
       "email": "management@seinvesting.com",
       "description": "Ermetes è una cooperativa a mutualità prevalente specializzata nell'ambito delle manutenzioni, ristrutturazioni e altri servizi connessi.",

@@ -51,24 +51,24 @@ const SustainabilitySection = () => {
         </svg>
         <div className="absolute inset-0 flex mt-10 justify-center items-center h-full">
           <h3 className="text-4xl font-light text-[#7c6714] leading-tight z-10 text-left px-4" style={{marginTop: '32px'}}>
-            Un occhio di riguardo all'ambiente 
+            Sostenibilità reale
           </h3>
         </div>
       </div>
       {/* Mobile heading only */}
       <div className="sm:hidden w-full flex justify-center items-center">
         <h3 className="text-3xl md:text-4xl font-light md:mb-6 text-[#7c6714] drop-shadow-lg px-4 pt-2" style={{marginTop: '24px'}}>
-          Un occhio di riguardo all'ambiente 
+          Sostenibilità reale
         </h3>
       </div>
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-4 lg:px-8 md:py-16 flex flex-col lg:flex-row items-center gap-12 relative z-10">
         <div className="flex-1 flex flex-col justify-top">
           {/* Heading moved above in curved SVG */}
           <p className="text-gray-700 text-justify [word-spacing:-1.5px] font-light mb-2 leading-relaxed text-lg">
-            S.E. Investing ci tiene davvero all’ambiente. Grazie a un apposito sistema informatico interno può tenere traccia sia a preventivo che a consuntivo dell’impatto ambientale delle commesse, può utilizzare solo materiali sostenibili certificati ove richiesto e gestire la tracciabilità di filiera.
+            Possiamo tenere traccia sia a preventivo che a consuntivo dell’impatto ambientale delle commesse, possiamo utilizzare solo materiali sostenibili certificati ove richiesto e gestire la tracciabilità di filiera.
           </p>
           <p className="text-gray-700 text-justify [word-spacing:-1.5px] font-light leading-relaxed text-lg">
-            Per bilanciare l’impatto ambientale le emissioni misurate possono essere successivamente compensate su richiesta dei clienti tramite progetti di piantumazione e riforestazione grazie alla partnership con diverse organizzazioni specializzate. 
+            Per bilanciare l’impatto ambientale le emissioni misurate possono essere successivamente compensate su richiesta dei clienti tramite progetti di  riforestazione grazie alla partnership con diverse organizzazioni specializzate.
           </p>
         </div>
         <div className="flex-1 flex justify-center items-center w-full">
