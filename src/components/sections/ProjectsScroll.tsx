@@ -404,7 +404,7 @@ const ProjectsScroll = () => {
                         </Badge>
                       </div>
                       <div className="flex items-end">
-                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 backdrop-blur-md bg-black/20 rounded-xl px-4 py-3 shadow-lg">
+                        <h3 className="text-xl md:text-2xl font-bold text-white mb-3 backdrop-blur-md bg-black/20 rounded-xl px-4 py-3 shadow-lg">
                           {(() => {
                             const project = filteredProjects[activeIndex];
                             const folder = getFolderFromImagePath(project.image);
