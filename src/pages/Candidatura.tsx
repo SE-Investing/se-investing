@@ -105,7 +105,7 @@ export default function CandidaturaPage() {
         <div className="container mx-auto px-4">
           <div className="grid gap-12 max-w-5xl mx-auto">
             {/* Back to home link */}
-            <a href="/se-investing" className="flex items-center mt-0 md:mt-10 text-black font-light mb-4 w-fit hover:underline">
+            <a href="/se-investing/" className="flex items-center mt-0 md:mt-10 text-black font-light mb-4 w-fit hover:underline">
               <ArrowLeft className="h-5 w-5 mr-2" />
               Torna alla home
             </a>
