@@ -7,19 +7,18 @@ import { gsap } from "gsap";
 const assetFolders = ["builders", "commercial", "maintenance", "roofing", "underfloor"];
 const assetImages: Record<string, string[]> = {
   "complexes": [
-      "assets/complexes/itacimirim obra 1.jpg",
-      "assets/complexes/itacimirim obra.jpg",
+      "assets/complexes/vitacimirim obra.jpg",
+      "assets/complexes/villa quinta das lagoas.jpg",
       "assets/complexes/paulo afonso obra.jpg",
       "assets/complexes/paulo afonso.jpg",
-      "assets/complexes/villa quinta das lagoas.jpg",
+      "assets/complexes/itacimirim obra 1.jpg",
     ],
     "construction/brasil": [
-      "assets/construction/brasil/2009, condomínio misto (residencial comercial) Porta do Sol com 21 unidades, 15 unidades residenciais e unidades comerciais.jpeg",
-      "assets/construction/brasil/2011, vila quinta das lagoas casa 2.jpeg",
-      "assets/construction/brasil/2011, vila quinta das lagoas casa.jpeg",
-      "assets/construction/brasil/2013, complexo residencial girassol (128 apartamentos).jpeg",
-      "assets/construction/brasil/2017 condomínio misto buganvila (14 unidade residencial e 11 unidades comercial).jpeg",
-      "assets/construction/brasil/5: 2018 residencial Aloha ville, (6 unidades residenciais).jpeg",
+      "assets/construction/brasil/itacimirim obra.jpg",
+      "assets/construction/brasil/paulo afonso obra.jpg",
+      "assets/construction/brasil/paulo afonso.jpg",
+      "assets/construction/brasil/jvilla quinta das lagoas.jpg",
+      "assets/construction/brasil/vitacimirim obra.jpg",
     ],
     "construction/villette a sierra - Villaggia La Suerte - Tenerife": [
       "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (1).jpeg",
@@ -38,6 +37,12 @@ const assetImages: Record<string, string[]> = {
       "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM (1).jpeg",
       "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM (2).jpeg",
       "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM.jpeg",
+      "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2009, condomínio misto (residencial comercial) Porta do Sol com 21 unidades, 15 unidades residenciais e unidades comerciais.jpeg",
+      "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2011, vila quinta das lagoas casa 2.jpeg",
+      "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2011, vila quinta das lagoas casa.jpeg",
+      "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2013, complexo residencial girassol (128 apartamentos).jpeg",
+      "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2017 condomínio misto buganvila (14 unidade residencial e 11 unidades comercial).jpeg",
+      "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/5: 2018 residencial Aloha ville, (6 unidades residenciais).jpeg",
     ],
 };
 

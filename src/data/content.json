@@ -5,13 +5,13 @@
       "detailsButton": "Maggiori Dettagli",
       "summaryTitle": "Riepilogo Richiesta",
       "title": "Lavori recenti",
-  "categories": ["Brasile", "Tenerife", "Residenziale"],
+  "categories": ["Brasile", "Tenerife"],
       "projects": [
         {
           "title": "Opera realizada no Brasil",
           "category": "Brasile",
           "description": "Opera realizada no Brasil",
-          "image": "./assets/construction/brasil/5: 2018 residencial Aloha ville, (6 unidades residenciais).jpeg",
+          "image": "./assets/construction/brasil/itacimirim obra.jpg",
           "status": "Completato",
           "link": ""
         },
@@ -20,15 +20,6 @@
           "category": "Tenerife",
           "description": "Villette a sierra - Villaggia La Suerte - Tenerife",
           "image": "./assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (1).jpeg",
-          "status": "Completato",
-          "link": "",
-          "_link": "/ermetes/magazine/it/spazio-commerciale"
-        },
-        {
-          "title": "Itacimirim Obra",
-          "category": "Residenziale",
-          "description": "Complesso Itacimirim",
-          "image": "./assets/complexes/itacimirim obra 1.jpg",
           "status": "Completato",
           "link": "",
           "_link": "/ermetes/magazine/it/spazio-commerciale"
