@@ -29,7 +29,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold text-foreground">Ermetes</span>
+            <span className="text-xl font-bold text-foreground">SE Investing</span>
           </div>
 
           {/* Desktop Navigation */}

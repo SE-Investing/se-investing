@@ -10,22 +10,27 @@ export default function PrivacyPolicyPage() {
         <div className="container mx-auto px-4">
           <div className="grid gap-12 max-w-3xl mx-auto">
             {/* Back to home link */}
-            <a href="/" className="flex items-center mt-0 md:mt-10 text-black font-light mb-4 w-fit hover:underline">
+            <a
+              href="/"
+              className="flex items-center mt-0 md:mt-10 text-black font-light mb-4 w-fit hover:underline"
+            >
               <ArrowLeft className="h-5 w-5 mr-2" />
               Torna alla home
             </a>
             <h1 className="text-4xl md:text-5xl font-editorial text-foreground text-center mb-8">
               Privacy Policy
             </h1>
-            <div className="bg-card rounded-3xl shadow-lg p-4 md:p-8 text-justify [word-spacing:-1.5px] text-base text-muted-foreground overflow-x-auto" style={{whiteSpace: 'pre-line'}}>
-              {`
+            <div
+              className="bg-card rounded-3xl shadow-lg p-4 md:p-8 text-justify [word-spacing:-1.5px] text-base text-muted-foreground overflow-x-auto"
+              style={{ whiteSpace: "pre-line" }}
+            >{`
 1. Premessa
-In ottemperanza degli obblighi derivanti dal Regolamento (UE) n. 2016/679 del Parlamento Europeo e della legislazione nazionale vigente, ERMETES SOCIETA’ COOPERATIVA SOCIALE rispetta e tutela i dati personali dei visitatori e degli utenti del sito internet www.ermetes.it.
+In ottemperanza degli obblighi derivanti dal Regolamento (UE) n. 2016/679 del Parlamento Europeo e della legislazione nazionale vigente, SUSTAINABLE ECONOMY INVESTING SE INVESTING SARL rispetta e tutela i dati personali dei visitatori e degli utenti del sito internet www.seinvesting.com.
 
-Questo documento fornisce informazioni sul trattamento dei dati personali raccolti da ERMETES SOCIETA’ COOPERATIVA SOCIALE tramite il Sito Internet e costituisce una informativa ai sensi della predetta normativa.
+Questo documento fornisce informazioni sul trattamento dei dati personali raccolti da SUSTAINABLE ECONOMY INVESTING SE INVESTING SARL tramite il Sito Internet e costituisce una informativa ai sensi della predetta normativa.
 
 2. Identità e dati di contatto del titolare del trattamento
-Il titolare del trattamento è ERMETES SOCIETA’ COOPERATIVA SOCIALE, P. IVA 02755460223, con sede legale in VIA SAN FRANCESCO D’ASSISI 10, 38122 Trento, Trento; email: amministrazione@ermetes.it, ermetes@pec.decaminada.it.
+Il titolare del trattamento è SUSTAINABLE ECONOMY INVESTING SE INVESTING SARL, P. IVA LU12345678, con sede legale in 10 Rue de l'Économie Sostenibile, L-1234 Luxembourg, Luxembourg; email: privacy@seinvesting.com, pec: seinvesting@pec.lu.
 
 3. Tipologie di dati trattati tramite il Sito Internet
 Il Titolare del Trattamento, tramite il Sito Internet, potrà trattare i seguenti dati:
@@ -48,10 +53,10 @@ I dati sono trattati con strumenti cartacei, elettronici e automatizzati per il 
 La gestione e la conservazione dei dati avviene su server ubicati nell’Unione Europea. Il Titolare potrà trasferire i dati extra-UE solo in conformità alla legge.
 
 9. Misure di sicurezza
-ERMETES SOCIETA’ COOPERATIVA SOCIALE adotta misure di sicurezza per impedire accessi non autorizzati, divulgazione, modifica o distruzione non autorizzata dei dati.
+SUSTAINABLE ECONOMY INVESTING SE INVESTING SARL adotta misure di sicurezza per impedire accessi non autorizzati, divulgazione, modifica o distruzione non autorizzata dei dati.
 
 10. Diritti degli interessati
-Gli interessati possono esercitare i diritti previsti dal GDPR: accesso, rettifica, cancellazione, limitazione, portabilità, opposizione. Le richieste possono essere inviate a amministrazione@ermetes.it o ermetes@pec.decaminada.it.
+Gli interessati possono esercitare i diritti previsti dal GDPR: accesso, rettifica, cancellazione, limitazione, portabilità, opposizione. Le richieste possono essere inviate a privacy@seinvesting.com o seinvesting@pec.lu.
 
 11. Diritto di reclamo
 Gli interessati possono proporre reclamo al Garante per la protezione dei dati personali o adire le opportune sedi giudiziarie.
@@ -62,12 +67,12 @@ Il Titolare non permette a minori di 16 anni di usufruire dei servizi e non racc
 13. Aggiornamenti
 La presente informativa è valida dal 25 maggio 2018 e potrà essere aggiornata. Eventuali modifiche saranno comunicate tramite il sito o altri mezzi idonei.
 
-ERMETES SOCIETA’ COOPERATIVA SOCIALE
-Viale San Francesco d’Assisi, 10, 38122 Trento TN
-Codice fiscale: 02755460223
-Email: amministrazione@ermetes.it
-PEC: ermetes.pec@decaminada.it
-Sito web: www.ermetes.it
+SUSTAINABLE ECONOMY INVESTING SE INVESTING SARL
+10 Rue de l'Économie Sostenibile, L-1234 Luxembourg
+P. IVA: LU12345678
+Email: privacy@seinvesting.com
+PEC: seinvesting@pec.lu
+Sito web: www.seinvesting.com
               `}
             </div>
           </div>
