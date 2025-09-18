@@ -65,14 +65,17 @@ const ConstructionHero = () => {
             {/* Right Column - Hero Title and Subtitle (order second on mobile, first on desktop) */}
             <div className="order-3 lg:order-2 w-full flex flex-col items-start">
               <div className="w-full lg:w-[90%] px-4 flex flex-col items-start">
-                <h1 
-                  className={`text-4xl md:text-8xl font-light leading-tight transform transition-all duration-700 delay-100 mt-4 md:mt-0 text-left mb-2 lg:mb-4 ${
-                    loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                  }`}
-                >
-                  <span className="block text-white drop-shadow-lg lg:py-1">{content.hero.title.split(' ').slice(0, 2).join(' ')}</span>
-                  <span className="block text-white drop-shadow-lg lg:py-1">{content.hero.title.split(' ').slice(2).join(' ')}</span>
-                </h1>
+                {/* Hide hero title on mobile */}
+                <div className="hidden md:block w-full">
+                  <h1 
+                    className={`text-4xl md:text-8xl font-light leading-tight transform transition-all duration-700 delay-100 mt-4 md:mt-0 text-left mb-2 lg:mb-4 ${
+                      loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                    }`}
+                  >
+                    <span className="block text-white drop-shadow-lg lg:py-1">{content.hero.title.split(' ').slice(0, 2).join(' ')}</span>
+                    <span className="block text-white drop-shadow-lg lg:py-1">{content.hero.title.split(' ').slice(2).join(' ')}</span>
+                  </h1>
+                </div>
                 {/* Subtitle */}
                 <p 
                   className={`text-xl sm:text-2xl text-white/90 max-w-2xl leading-relaxed drop-shadow font-light transform transition-all duration-700 delay-200 text-left ${

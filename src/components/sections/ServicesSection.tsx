@@ -53,9 +53,8 @@ const ServicesSection = () => {
                 <>
                   <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full px-4">
                     <h3 className="text-4xl md:text-4xl font-light mb-4 mt-2 text-[#7c6714] drop-shadow-lg">Progettazione e studi di fattibilità</h3>
-                    <p className="font-normal text-left text-xl mb-2 text-[#7c6714] w-full">Studi di fattibilità economica e progettazione tecnica</p>
                     <div className="text-gray-800 text-justify [word-spacing:-1.5px] text-lg leading-relaxed text-left w-full">
-                      <p className="mb-2 text-justify">SE Investing raggruppa due decenni di esperienze nel settore delle costruzioni e delle tecnologie garantendo professionalità costi chiari e tempi certi.</p>
+                      <p className="mb-2 text-justify">Mettiamo in campo competenze e innovazione nel settore delle tecnologie per la transizione energetica, decarbonizzazione e gestione integrata dei rifiuti. Dalla fattibilità alla progettazione fino alla messa in opera.</p>
                     </div>
                   </div>
                   <div className="w-full h-48 flex items-center mt-2">
