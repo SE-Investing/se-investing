@@ -270,7 +270,7 @@ const ProjectsScroll = () => {
         style={{ width: '100vw', position: 'relative' }}
         ref={containerRef}
       >
-        <div className="flex flex-col justify-center w-full max-w-full mx-auto py-8 relative">
+        <div className="flex flex-col justify-center w-full max-w-full mx-auto py-8 pb-1 relative">
           {/* Project Panel (only active) */}
           {filteredProjects.length > 0 && filteredProjects[activeIndex] && (
             <div

@@ -4,6 +4,7 @@ import ModernNavigation from "@/components/navigation/ModernNavigation";
 import ConstructionHero from "@/components/hero/ConstructionHero";
 import ServicesSection from "@/components/sections/ServicesSection";
 import ProjectsScroll from "@/components/sections/ProjectsScroll";
+import SolarScroll from "@/components/sections/SolarScroll";
 import Footer from "@/components/sections/Footer";
 import WorkWithUs from "@/components/sections/WorkWithUs";
 import { useEffect, useRef, useState } from "react";
@@ -34,7 +35,8 @@ const Index = () => {
         </section>
 
         <ServicesSection />
-        <ProjectsScroll />
+  <ProjectsScroll />
+  <SolarScroll />
         <SustainabilitySection />
         <WorkWithUs />
         <Footer />
