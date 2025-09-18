@@ -7,8 +7,7 @@ const solarImages = [
   "assets/construction/solar/WhatsApp Image 2025-09-18 at 2.01.04 AM.jpeg",
   "assets/construction/solar/WhatsApp Image 2025-09-18 at 2.00.05 AM.jpeg",
   "assets/construction/solar/WhatsApp Image 2025-09-18 at 2.03.10 AM.jpeg",
-  "assets/construction/solar/WhatsApp Image 2025-09-18 at 2.00.50 AM.jpeg",
-  "assets/construction/solar/WhatsApp Image 2025-09-18 at 2.02.41 AM.jpeg"
+  "assets/construction/solar/WhatsApp Image 2025-09-18 at 2.00.50 AM.jpeg"
 ];
 
 const SolarScroll = () => {
@@ -56,6 +55,15 @@ const SolarScroll = () => {
             style={{width: '100vw', maxWidth: '100vw', height: '100%', maxHeight: '100%'}} 
             draggable={false}
           />
+          {/* Overlay title and subtitle: mobile only title, desktop both, align to bottom on desktop */}
+          <div className="absolute left-0 right-0 bottom-0 flex flex-col items-start pointer-events-none px-4 md:px-8 pb-4">
+            <h3 className="text-lg md:text-2xl font-bold text-white mb-1 backdrop-blur-md bg-black/30 rounded-xl px-3 py-2 shadow-lg">
+              Progettazione e studi di fattibilità
+            </h3>
+            <p className="hidden md:block text-base md:text-lg text-white/90 leading-relaxed font-light backdrop-blur-md bg-black/20 rounded-xl px-3 py-2 shadow-lg mb-2 max-w-3xl md:max-w-2xl">
+              Mettiamo in campo competenze e innovazione nel settore delle tecnologie per la transizione energetica, decarbonizzazione e gestione integrata dei rifiuti. Dalla fattibilità alla progettazione fino alla messa in opera.
+            </p>
+          </div>
           <button
             onClick={handlePrev}
             className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full p-2 flex items-center justify-center bg-black/40 hover:bg-black/60 transition-opacity duration-200 z-10"
