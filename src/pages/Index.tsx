@@ -34,9 +34,9 @@ const Index = () => {
           </div>
         </section>
 
+        <ProjectsScroll />
+        <SolarScroll />
         <ServicesSection />
-  <ProjectsScroll />
-  <SolarScroll />
         <SustainabilitySection />
         <WorkWithUs />
         <Footer />
