@@ -51,7 +51,7 @@ const ServicesSection = () => {
               {/* Text first on mobile, image below; desktop: image left, text right */}
               {isMobile ? (
                 <>
-                  <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full">
+                  <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full px-4">
                     <h3 className="text-4xl md:text-4xl font-light mb-4 mt-2 text-[#7c6714] drop-shadow-lg">La mission</h3>
                     <p className="font-normal text-left text-xl mb-2 text-[#7c6714] w-full">Studi di fattibilità economica e progettazione tecnica</p>
                     <div className="text-gray-800 text-justify [word-spacing:-1.5px] text-lg leading-relaxed text-left w-full">
@@ -77,7 +77,7 @@ const ServicesSection = () => {
                       style={{ maskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, white 0%, white 60%, transparent 100%)' }}
                     />
                   </div>
-                  <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full">
+                  <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full px-4">
                     <h3 className="text-4xl md:text-4xl font-light mb-4 mt-2 text-[#7c6714] drop-shadow-lg">La mission</h3>
                     <p className="font-normal text-left text-xl mb-2 text-[#7c6714] w-full">Studi di fattibilità economica e progettazione tecnica</p>
                     <div className="text-gray-800 text-justify [word-spacing:-1.5px] text-lg leading-relaxed text-left w-full">
@@ -93,7 +93,7 @@ const ServicesSection = () => {
             <div className={`backdrop-blur-md bg-white/70 rounded-xl shadow-lg w-full h-[520px] flex ${isMobile ? 'flex-col' : 'flex-row'} items-center gap-0 relative overflow-hidden`}>
               {isMobile ? (
                 <>
-                  <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full">
+                  <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full px-4">
                     <h2 className="mt-2 text-4xl md:text-4xl text-left font-light mb-4 text-[#7c6714] drop-shadow-lg">Efficienza e organizzazione tramite digitale</h2>
                     <div className="text-gray-800 text-lg leading-relaxed text-justify [word-spacing:-1.5px] w-full font-extralight mb-2">
                       <p className="mb-2 text-justify">Grazie ad un apposito sistema informatico AI interno interconnesso con gli hardware di cantiere possiamo tenere traccia delle lavorazioni quotidiane, tenere aggiornato il cliente anche a distanza tramite condivisione cloud facilitare il controllo di gestione e individuare eventuali scostamenti rispetto al cronoprogramma.</p>
