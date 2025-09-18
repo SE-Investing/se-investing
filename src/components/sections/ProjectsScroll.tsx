@@ -7,11 +7,11 @@ import { gsap } from "gsap";
 const assetFolders = ["builders", "commercial", "maintenance", "roofing", "underfloor"];
 const assetImages: Record<string, { src: string; title: string }[]> = {
   "construction/brasil": [
-    { src: "assets/construction/brasil/itacimirim obra.jpg", title: "Itacimirim Obra" },
-    { src: "assets/construction/brasil/paulo afonso obra.jpg", title: "Paulo Afonso Obra" },
-    { src: "assets/construction/brasil/paulo afonso.jpg", title: "Paulo Afonso" },
-    { src: "assets/construction/brasil/jvilla quinta das lagoas.jpg", title: "Villa Quinta Das Lagoas" },
-    { src: "assets/construction/brasil/vitacimirim obra.jpg", title: "Itacimirim Obra" },
+    { src: "assets/construction/brasil/itacimirim obra.jpg", title: "2018 residencial Aloga ville, (6 unidades residenciais)" },
+    { src: "assets/construction/brasil/paulo afonso obra.jpg", title: "2009, condomínio mistro (residencial comercial) Porto do Sol com 21 unidaded, 15 unidades residenciais e unidades comerciais" },
+    { src: "assets/construction/brasil/paulo afonso.jpg", title: "2009, condomínio mistro (residencial comercial) Porto do Sol com 21 unidaded, 15 unidades residenciais e unidades comerciais" },
+    { src: "assets/construction/brasil/jvilla quinta das lagoas.jpg", title: "2011, Villa Quinta Das Lagoas Casa" },
+    { src: "assets/construction/brasil/vitacimirim obra.jpg", title: "2013, complexo residencial girassol (128 apartamentos)" },
   ],
   "construction/villette a sierra - Villaggia La Suerte - Tenerife": [
     { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (1).jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
