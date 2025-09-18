@@ -10,7 +10,7 @@ const assetImages: Record<string, { src: string; title: string }[]> = {
     { src: "assets/construction/brasil/itacimirim obra.jpg", title: "2018 residencial Aloha ville, (6 unidades residenciais)" },
     { src: "assets/construction/brasil/paulo afonso obra.jpg", title: "2009, condomínio mistro (residencial comercial) Porto do Sol com 21 unidaded, 15 unidades residenciais e unidades comerciais" },
     { src: "assets/construction/brasil/paulo afonso.jpg", title: "2009, condomínio mistro (residencial comercial) Porto do Sol com 21 unidaded, 15 unidades residenciais e unidades comerciais" },
-    { src: "assets/construction/brasil/jvilla quinta das lagoas.jpg", title: "2011, Villa Quinta Das Lagoas Casa" },
+    { src: "assets/construction/brasil/jvilla quinta das lagoas.jpg", title: "2011, Villa Quinta das Lagoas Casa" },
     { src: "assets/construction/brasil/vitacimirim obra.jpg", title: "2013, complexo residencial girassol (128 apartamentos)" },
   ],
   "construction/villette a sierra - Villaggia La Suerte - Tenerife": [
