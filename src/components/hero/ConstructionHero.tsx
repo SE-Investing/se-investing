@@ -21,7 +21,7 @@ const ConstructionHero = () => {
 
   return (
     <>
-      <section id="hero" className="mt-10 py-12 md:py-0 bg-background relative md:min-h-screen md:mt-0 flex items-center justify-center overflow-hidden bg-background">
+      <section id="hero" className="py-12 md:py-0 bg-background relative md:min-h-screen md:mt-0 flex items-center justify-center overflow-hidden bg-background">
         {/* YouTube Video Background */}
         <div className="absolute inset-0 z-0">
           <iframe
