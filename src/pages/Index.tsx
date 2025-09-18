@@ -3,6 +3,8 @@ import ConstructionBackground from "@/components/background/ConstructionBackgrou
 import ModernNavigation from "@/components/navigation/ModernNavigation";
 import ConstructionHero from "@/components/hero/ConstructionHero";
 import ServicesSection from "@/components/sections/ServicesSection";
+import ServiceCard1 from "@/components/sections/ServiceCard1";
+import ServiceCard2 from "@/components/sections/ServiceCard2";
 import ProjectsScroll from "@/components/sections/ProjectsScroll";
 import SolarScroll from "@/components/sections/SolarScroll";
 import Footer from "@/components/sections/Footer";
@@ -34,9 +36,9 @@ const Index = () => {
           </div>
         </section>
 
-        <ProjectsScroll />
-        <SolarScroll />
-        <ServicesSection />
+  <ServiceCard1 />
+  <SolarScroll />
+  <ServiceCard2 />
         <SustainabilitySection />
         <WorkWithUs />
         <Footer />
