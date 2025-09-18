@@ -16,11 +16,6 @@ const Footer = () => {
                   {content.footer.company}
                 </span>
             </div>
-            <div className="flex space-x-4">
-              <a href="http://instagram.com/sustainableeconomy_association" target="_blank" rel="noopener noreferrer">
-                <Instagram className="h-5 w-5 text-background/80 hover:text-background cursor-pointer transition-colors" />
-              </a>
-            </div>
           </div>
 
           {/* Contact Info */}
