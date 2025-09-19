@@ -35,10 +35,10 @@ const Index = () => {
             </p>
           </div>
         </section>
-
-  <ServiceCard1 />
-  <SolarScroll />
-  <ServiceCard2 />
+        <ProjectsScroll />
+        <ServiceCard1 />
+        <SolarScroll />
+        <ServiceCard2 />
         <SustainabilitySection />
         <WorkWithUs />
         <Footer />
