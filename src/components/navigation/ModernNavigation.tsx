@@ -78,7 +78,7 @@ const ModernNavigation = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 dm-sans-light bg-dark/95 backdrop-blur-md shadow-sm border-b border-border/10`}
     >
       <div className="md:container mx-auto md:px-4 mt-2">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-12 md:h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 

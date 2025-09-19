@@ -55,29 +55,23 @@ const SolarScroll = () => {
             style={{width: '100vw', maxWidth: '100vw', height: '100%', maxHeight: '100%'}} 
             draggable={false}
           />
-          {/* Overlay title and subtitle: mobile only title, desktop both, align to bottom on desktop */}
-          <div className="absolute left-0 right-0 bottom-0 flex flex-col items-start pointer-events-none px-4 md:px-8 pb-4">
-            <h3 className="text-lg md:text-2xl font-bold text-white mb-1 backdrop-blur-md bg-black/30 rounded-xl px-3 py-2 shadow-lg">
-              Progettazione e studi di fattibilità
-            </h3>
-            <p className="hidden md:block text-base md:text-lg text-white/90 leading-relaxed font-light backdrop-blur-md bg-black/20 rounded-xl px-3 py-2 shadow-lg mb-2 max-w-3xl md:max-w-2xl">
-              Mettiamo in campo competenze e innovazione nel settore delle tecnologie per la transizione energetica, decarbonizzazione e gestione integrata dei rifiuti. Dalla fattibilità alla progettazione fino alla messa in opera.
-            </p>
-          </div>
-          <button
-            onClick={handlePrev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full p-2 flex items-center justify-center bg-black/40 hover:bg-black/60 transition-opacity duration-200 z-10"
-            aria-label="Previous"
-          >
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
-          </button>
-          <button
-            onClick={handleNext}
-            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-2 flex items-center justify-center bg-black/40 hover:bg-black/60 transition-opacity duration-200 z-10"
-            aria-label="Next"
-          >
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
-          </button>
+            {/* Navigation buttons exactly as in ProjectsScroll */}
+            <button
+              onClick={handlePrev}
+              className={`absolute ${isMobile ? 'left-1' : 'left-4'} top-1/2 -translate-y-1/2 rounded-full flex items-center justify-center z-10 transition-opacity duration-200 ${isMobile ? 'p-2 bg-transparent' : 'p-2 bg-black/40 hover:bg-black/60'}`}
+              tabIndex={0}
+              aria-label="Previous Images"
+            >
+              <svg width={isMobile ? 28 : 32} height={isMobile ? 28 : 32} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
+            </button>
+            <button
+              onClick={handleNext}
+              className={`absolute ${isMobile ? 'right-3' : 'right-4'} top-1/2 -translate-y-1/2 rounded-full flex items-center justify-center z-10 transition-opacity duration-200 ${isMobile ? 'bg-transparent' : 'p-2 bg-black/40 hover:bg-black/60'}`}
+              tabIndex={0}
+              aria-label="Next Images"
+            >
+              <svg width={isMobile ? 28 : 32} height={isMobile ? 28 : 32} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
+            </button>
         </div>
         <div className="flex justify-center mt-4 gap-2">
           {solarImages.map((_, idx) => (
