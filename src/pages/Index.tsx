@@ -36,6 +36,19 @@ const Index = () => {
           </div>
         </section>
         <ProjectsScroll />
+        {/* SolarScroll section title styled like ProjectsScroll */}
+        <div className="bg-background sm:py-2 z-40 border-b border-border shadow-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center sm:mb-4 md:mb-6">
+              <h2 className="text-4xl md:text-4xl font-light mb-6 mt-8 text-[#7c6714] drop-shadow-lg ">
+                Progettazione e studi di fattibilità
+              </h2>
+              <h3 className="font-light text-gray-600 mb-3 text-base md:text-xl max-w-4xl mx-auto text-justify">
+                Mettiamo in campo competenze e innovazione nel settore delle tecnologie per la transizione energetica, decarbonizzazione e gestione integrata dei rifiuti. Dalla fattibilità alla progettazione fino alla messa in opera.
+              </h3>
+            </div>
+          </div>
+        </div>
         <SolarScroll />
         <ServiceCard2 />
         <SustainabilitySection />
