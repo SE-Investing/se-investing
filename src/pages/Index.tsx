@@ -36,7 +36,6 @@ const Index = () => {
           </div>
         </section>
         <ProjectsScroll />
-        <ServiceCard1 />
         <SolarScroll />
         <ServiceCard2 />
         <SustainabilitySection />
