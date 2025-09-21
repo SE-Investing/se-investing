@@ -7,11 +7,11 @@ import { useTranslation } from "react-i18next";
 const assetFolders = ["builders", "commercial", "maintenance", "roofing", "underfloor"];
 const assetImages: Record<string, { src: string; title: string }[]> = {
   "construction/brasil": [
-    { src: "assets/construction/brasil/itacimirim obra.jpg", title: "2018 residencial Aloha ville, (6 unidades residenciais)" },
-    { src: "assets/construction/brasil/paulo afonso obra.jpg", title: "2009, condomínio mistro (residencial comercial) Porto do Sol com 21 unidaded, 15 unidades residenciais e unidades comerciais" },
-    { src: "assets/construction/brasil/paulo afonso.jpg", title: "2009, condomínio mistro (residencial comercial) Porto do Sol com 21 unidaded, 15 unidades residenciais e unidades comerciais" },
-    { src: "assets/construction/brasil/jvilla quinta das lagoas.jpg", title: "2011, Villa Quinta das Lagoas Casa" },
-    { src: "assets/construction/brasil/vitacimirim obra.jpg", title: "2013, complexo residencial girassol (128 apartamentos)" },
+  { src: "assets/construction/brasil/itacimirim obra.jpg", title: "residencial Aloha ville, (6 unidades residenciais)" },
+  { src: "assets/construction/brasil/paulo afonso obra.jpg", title: "condomínio mistro (residencial comercial) Porto do Sol com 21 unidaded, 15 unidades residenciais e unidades comerciais" },
+  { src: "assets/construction/brasil/paulo afonso.jpg", title: "condomínio mistro (residencial comercial) Porto do Sol com 21 unidaded, 15 unidades residenciais e unidades comerciais" },
+  { src: "assets/construction/brasil/jvilla quinta das lagoas.jpg", title: "Villa Quinta das Lagoas Casa" },
+  { src: "assets/construction/brasil/vitacimirim obra.jpg", title: "complexo residencial girassol (128 apartamentos)" },
   ],
   "construction/Urbanizacion un posto al sole Tenerife": [
     { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (1).jpeg", title: "Urbanizacion un posto al sole Tenerife" },

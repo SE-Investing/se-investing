@@ -39,9 +39,7 @@ const ModernNavigation = () => {
 
   const navigationItems = [
     { key: "projects", label: t('navigation.projects'), href: '/se-investing/#projects' },
-    { key: "services", label: t('navigation.services'), href: '/se-investing/#services' },
     { key: "about", label: t('navigation.about'), href: '/se-investing/#about' },
-    { key: "articles", label: t('navigation.articles'), href: "/se-investing/magazine" },
     { key: "contact", label: t('navigation.contact'), href: '/se-investing/#contact'},
   ];
   // Language switcher flags
@@ -130,15 +128,20 @@ const ModernNavigation = () => {
               })}
               
               <div className="px-4 pt-3 border-t border-border/10">
-                <div className="flex items-center justify-between">
-
-                  <Button
-                    onClick={() => scrollToSection("hero")}
-                    size="sm"
-                    className="bg-primary hover:bg-primary/90 text-white"
-                  >
-                    {t('navigation.preventivo')}
-                  </Button>
+                {/* Language flags for mobile */}
+                <div className="flex items-center space-x-2 mt-2">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => {
+                        i18n.changeLanguage(lang.code);
+                      }}
+                      className={`text-xl px-1 focus:outline-none ${i18n.language === lang.code ? 'opacity-100' : 'opacity-60 hover:opacity-100'}`}
+                      aria-label={lang.label}
+                    >
+                      <span>{lang.flag}</span>
+                    </button>
+                  ))}
                 </div>
               </div>
             </div>
