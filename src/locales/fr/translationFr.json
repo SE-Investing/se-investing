@@ -49,7 +49,7 @@
   "candidatura.telefono": "Numéro de téléphone",
   "candidatura.indirizzo": "Adresse du domicile",
   "candidatura.domande": "Questions",
-  "candidatura.privacy": "J'accepte les <1>Conditions générales</1> d'utilisation du site et la <3>Politique de confidentialité</3>",
+  "candidatura.privacy": "J'accepte les Conditions générales d'utilisation du site et la Politique de confidentialité (voir https://se-investing.github.io/se-investing/PrivacyPolicy)",
   "candidatura.invia": "ENVOYER",
   "candidatura.invio": "Envoi...",
   "candidatura.success.title": "Candidature envoyée !",

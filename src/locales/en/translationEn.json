@@ -50,7 +50,7 @@
   "candidatura.telefono": "Phone Number",
   "candidatura.indirizzo": "Home Address",
   "candidatura.domande": "Questions",
-  "candidatura.privacy": "I accept the <1>Terms and Conditions</1> of use and <3>Privacy Policy</3>",
+  "candidatura.privacy": "I accept the Terms and Conditions of use and the Privacy Policy (see https://se-investing.github.io/se-investing/PrivacyPolicy)",
   "candidatura.invia": "SEND",
   "candidatura.invio": "Sending...",
   "candidatura.success.title": "Application sent!",

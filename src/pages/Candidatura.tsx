@@ -105,7 +105,15 @@ export default function CandidaturaPage() {
               </div>
               <div className="flex items-center gap-2">
                 <input type="checkbox" name="privacy" checked={formData.privacy} onChange={handleInputChange} required />
-                <span className="text-sm text-gray-700">{t('candidatura.privacy')}</span>
+                <span
+                  className="text-sm text-gray-700"
+                  dangerouslySetInnerHTML={{
+                    __html: t('candidatura.privacy').replace(
+                      /(https:\/\/se-investing\.github\.io\/se-investing\/PrivacyPolicy)/,
+                      (url) => `<a href="${url}" target="_blank" rel="noopener noreferrer" class="underline text-blue-600 hover:text-blue-800">${t('privacyPolicy.title')}</a>`
+                    )
+                  }}
+                />
               </div>
               <button type="submit" className="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold px-8 py-3 rounded-lg" disabled={isSubmitting}>
                 {isSubmitting ? t('candidatura.invio') : t('candidatura.invia')}
