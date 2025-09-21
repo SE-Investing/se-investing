@@ -17,7 +17,7 @@ const ConstructionHero = () => {
 
   return (
     <>
-      <section id="hero" className="py-12 md:py-0 bg-background relative md:min-h-screen md:mt-0 flex items-center justify-center overflow-hidden bg-background">
+      <section id="hero" className="py-12 md:py-0 bg-background relative md:min-h-screen md:mt-0 flex h-[600px] md:h-auto items-end justify-center overflow-hidden bg-background">
         {/* YouTube Video Background */}
         <div className="absolute inset-0 z-0">
           <iframe
@@ -34,7 +34,7 @@ const ConstructionHero = () => {
               minWidth: '100vw',
               width: '100%',
               // Responsive overrides
-              ...(window.innerWidth <= 768 ? { width: '200%', height: '125%', marginLeft: '-200px', marginTop: '-10px' } : {}),
+              ...(window.innerWidth <= 768 ? { width: '270%', height: '205%', marginLeft: '-200px', marginTop: '-300px' } : {}),
             }}
           />
           <div className="absolute inset-0 bg-black/20" />
