@@ -17,7 +17,7 @@ const ConstructionHero = () => {
 
   return (
     <>
-      <section id="hero" className="py-12 md:py-0 bg-background relative md:min-h-screen md:mt-0 flex h-[600px] md:h-auto items-end justify-center overflow-hidden bg-background">
+      <section id="hero" className="py-12 md:py-0 bg-background relative md:min-h-screen md:mt-0 flex h-[600px] md:h-auto items-center justify-center overflow-hidden bg-background">
         {/* YouTube Video Background */}
         <div className="absolute inset-0 z-0">
           <iframe
@@ -62,9 +62,9 @@ const ConstructionHero = () => {
             <div className="order-3 lg:order-2 w-full flex flex-col items-start">
               <div className="w-full lg:w-[90%] px-4 flex flex-col items-start">
                 {/* Hide hero title on mobile */}
-                <div className="hidden md:block w-full">
+                <div className="block w-full">
                   <h1 
-                    className={`text-4xl md:text-8xl font-light leading-tight transform transition-all duration-700 delay-100 mt-4 md:mt-0 text-left mb-2 lg:mb-4 ${
+                    className={`text-6xl sm:text-7xl md:text-8xl font-light leading-tight transform transition-all duration-700 delay-100 mt-4 md:mt-0 text-left mb-2 lg:mb-4 ${
                       loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                     }`}
                   >
