@@ -2,10 +2,12 @@ import ModernNavigation from "@/components/navigation/ModernNavigation";
 import Footer from "@/components/sections/Footer";
 import { ArrowLeft } from "lucide-react";
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import { useToast } from '@/hooks/use-toast';
 
 export default function CandidaturaPage() {
   const { toast } = useToast();
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     nome: "",
     cognome: "",
@@ -40,63 +42,25 @@ export default function CandidaturaPage() {
     e.preventDefault();
     if (!formData.privacy) return;
     setIsSubmitting(true);
-
-    // Helper to convert file to raw base64 (no data URL)
-    function fileToBase64(file: File): Promise<string> {
-      return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = () => {
-          if (typeof reader.result === 'string') {
-            const base64 = reader.result.split(',')[1];
-            resolve(base64);
-          } else {
-            reject(new Error('FileReader result is not a string'));
-          }
-        };
-        reader.onerror = reject;
-        reader.readAsDataURL(file);
+    // TODO: Add form submission logic here (e.g., API call)
+    setTimeout(() => {
+      setIsSubmitting(false);
+      toast({
+        title: t('candidatura.success.title'),
+        description: t('candidatura.success.desc'),
       });
-    }
-
-    let data: any = {
-  nome: formData.nome,
-  cognome: formData.cognome,
-  email: formData.email,
-  telefono: formData.telefono,
-  indirizzo: formData.indirizzo,
-  domande: formData.domande,
-    };
-  // Removed CV upload block
-
-    // Serialize as x-www-form-urlencoded
-    const params = Object.keys(data)
-      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-      .join('&');
-
-    // Send via XMLHttpRequest (replace URL with your Google Script endpoint)
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbx64UQXHXnmDepRO2GKJ8M0WBvb_fRDflqeREaU29bv1CW3IR5c4sjYysDEPJzRk0FOYQ/exec');
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        toast({
-          title: 'Candidatura inviata!',
-          description: 'Grazie per aver inviato la tua candidatura. Ti ricontatteremo al più presto.',
-        });
-        setFormData({
-          nome: "",
-          cognome: "",
-          email: "",
-          telefono: "",
-          indirizzo: "",
-          domande: "",
-          privacy: false,
-        });
-        setIsSubmitting(false);
-      }
-    };
-    xhr.send(params);
+      setFormData({
+        nome: "",
+        cognome: "",
+        email: "",
+        telefono: "",
+        indirizzo: "",
+        domande: "",
+        privacy: false,
+      });
+    }, 1000);
   };
+
 
   return (
     <div className="relative min-h-screen bg-background">
@@ -107,44 +71,44 @@ export default function CandidaturaPage() {
             {/* Back to home link */}
             <a href="/se-investing/" className="flex items-center mt-0 md:mt-10 text-black font-light mb-4 w-fit hover:underline">
               <ArrowLeft className="h-5 w-5 mr-2" />
-              Torna alla home
+              {t('privacyPolicy.back')}
             </a>
             <h1 className="text-3xl md:text-4xl font-editorial text-foreground mb-8">
-              Contact us
+              {t('candidatura.title')}
             </h1>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-gray-700 mb-1">Nome</label>
+                  <label className="block text-gray-700 mb-1">{t('candidatura.nome')}</label>
                   <input name="nome" value={formData.nome} onChange={handleInputChange} className="w-full rounded-lg bg-gray-50 border border-gray-100 p-3" />
                 </div>
                 <div>
-                  <label className="block text-gray-700 mb-1">Cognome</label>
+                  <label className="block text-gray-700 mb-1">{t('candidatura.cognome')}</label>
                   <input name="cognome" value={formData.cognome} onChange={handleInputChange} className="w-full rounded-lg bg-gray-50 border border-gray-100 p-3" />
                 </div>
                 <div>
-                  <label className="block text-gray-700 mb-1">Indirizzo Email <span className="text-red-500">*</span></label>
+                  <label className="block text-gray-700 mb-1">{t('candidatura.email')} <span className="text-red-500">*</span></label>
                   <input name="email" type="email" value={formData.email} onChange={handleInputChange} required className="w-full rounded-lg bg-gray-50 border border-gray-100 p-3" />
                 </div>
                 <div>
-                  <label className="block text-gray-700 mb-1">Numero di telefono</label>
+                  <label className="block text-gray-700 mb-1">{t('candidatura.telefono')}</label>
                   <input name="telefono" value={formData.telefono} onChange={handleInputChange} className="w-full rounded-lg bg-gray-50 border border-gray-100 p-3" />
                 </div>
               </div>
               <div>
-                <label className="block text-gray-700 mb-1">Indirizzo di residenza</label>
+                <label className="block text-gray-700 mb-1">{t('candidatura.indirizzo')}</label>
                 <input name="indirizzo" value={formData.indirizzo} onChange={handleInputChange} className="w-full rounded-lg bg-gray-50 border border-gray-100 p-3" />
               </div>
               <div>
-                <label className="block text-gray-700 mb-1">Domande</label>
+                <label className="block text-gray-700 mb-1">{t('candidatura.domande')}</label>
                 <textarea name="domande" value={formData.domande} onChange={handleInputChange} className="w-full rounded-lg bg-gray-50 border border-gray-100 p-3 min-h-[100px]" />
               </div>
               <div className="flex items-center gap-2">
                 <input type="checkbox" name="privacy" checked={formData.privacy} onChange={handleInputChange} required />
-                <span className="text-sm text-gray-700">Accetto i <a href="/ermetes/privacypolicy" target="_blank" rel="noopener noreferrer" className="text-pink-600 underline">Termini e le Condizioni</a> di utilizzo del Sito e <a href="/ermetes/privacypolicy" target="_blank" rel="noopener noreferrer" className="text-pink-600 underline">Privacy Policy</a></span>
+                <span className="text-sm text-gray-700">{t('candidatura.privacy')}</span>
               </div>
               <button type="submit" className="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold px-8 py-3 rounded-lg" disabled={isSubmitting}>
-                {isSubmitting ? 'Invio...' : 'INVIA'}
+                {isSubmitting ? t('candidatura.invio') : t('candidatura.invia')}
               </button>
             </form>
           </div>

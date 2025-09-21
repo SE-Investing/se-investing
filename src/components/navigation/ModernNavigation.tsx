@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/contexts/LanguageContext";
-import articlesData from "@/data/articles.json";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 // Using uploaded image directly
 // import ermetesLogo from "@assets/ermetes-logo.png";
 
 const ModernNavigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { language, setLanguage, content } = useLanguage();
+  const { t, i18n } = useTranslation();
   // Detect if on article page and get lang/slug from URL
   const isArticlePage = window.location.pathname.includes('/magazine/');
   let currentLang = null;
@@ -19,33 +18,6 @@ const ModernNavigation = () => {
     if (match) {
       currentLang = match[1];
       currentSlug = match[2];
-    }
-  }
-
-  // Map slugs between languages
-  const articlesIt = articlesData.it;
-  const articlesEn = articlesData.en;
-  function getSlugForLang(targetLang, currentSlug) {
-    if (targetLang === 'it') {
-      // Find Italian article whose English slug matches currentSlug
-      const enArticle = articlesEn.find(a => a.link.endsWith(currentSlug));
-      if (enArticle) {
-        // Find matching Italian article by id
-        const itArticle = articlesIt.find(a => a.id === enArticle.id);
-        return itArticle ? itArticle.link.split('/').pop() : currentSlug;
-      }
-      // Or, if already Italian, just return
-      return currentSlug;
-    } else {
-      // Find English article whose Italian slug matches currentSlug
-      const itArticle = articlesIt.find(a => a.link.endsWith(currentSlug));
-      if (itArticle) {
-        // Find matching English article by id
-        const enArticle = articlesEn.find(a => a.id === itArticle.id);
-        return enArticle ? enArticle.link.split('/').pop() : currentSlug;
-      }
-      // Or, if already English, just return
-      return currentSlug;
     }
   }
 
@@ -66,11 +38,17 @@ const ModernNavigation = () => {
   };
 
   const navigationItems = [
-    { key: "projects", label: content.navigation.projects, href: '/se-investing/#projects' },
-    { key: "services", label: content.navigation.services, href: '/se-investing/#services' },
-    { key: "about", label: content.navigation.about, href: '/se-investing/#about' },
-    { key: "articles", label: content.navigation.articles, href: "/se-investing/magazine" },
-    { key: "contact", label: content.navigation.contact, href: '/se-investing/#contact'},
+    { key: "projects", label: t('navigation.projects'), href: '/se-investing/#projects' },
+    { key: "services", label: t('navigation.services'), href: '/se-investing/#services' },
+    { key: "about", label: t('navigation.about'), href: '/se-investing/#about' },
+    { key: "articles", label: t('navigation.articles'), href: "/se-investing/magazine" },
+    { key: "contact", label: t('navigation.contact'), href: '/se-investing/#contact'},
+  ];
+  // Language switcher flags
+  const languages = [
+    { code: 'it', label: 'IT', flag: '🇮🇹' },
+    { code: 'en', label: 'EN', flag: '🇬🇧' },
+    { code: 'fr', label: 'FR', flag: '🇫🇷' },
   ];
 
   return (
@@ -103,6 +81,21 @@ const ModernNavigation = () => {
                 </a>
               );
             })}
+            {/* Language flags */}
+            <div className="flex items-center space-x-2 ml-6">
+              {languages.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => {
+                    i18n.changeLanguage(lang.code);
+                  }}
+                  className={`text-xl px-1 focus:outline-none ${i18n.language === lang.code ? 'opacity-100' : 'opacity-60 hover:opacity-100'}`}
+                  aria-label={lang.label}
+                >
+                  <span>{lang.flag}</span>
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -144,7 +137,7 @@ const ModernNavigation = () => {
                     size="sm"
                     className="bg-primary hover:bg-primary/90 text-white"
                   >
-                    Preventivo
+                    {t('navigation.preventivo')}
                   </Button>
                 </div>
               </div>

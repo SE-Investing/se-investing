@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { useTranslation } from "react-i18next";
 
 // Statically list all images in assets/construction/solar
 const solarImages = [
@@ -11,6 +12,7 @@ const solarImages = [
 ];
 
 const SolarScroll = () => {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' ? window.innerWidth < 768 : false);
   const imageRef = useRef<HTMLImageElement>(null);
@@ -45,45 +47,45 @@ const SolarScroll = () => {
 
   return (
     <section id="solar-projects" className="w-full flex flex-col items-center justify-center pb-8">
-        <div className="w-full relative">
-          <div className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden flex items-center justify-center" style={{maxWidth: '100vw'}}>
-            <img
-              ref={imageRef}
-              src={solarImages[activeIndex]}
-              alt="Solar Project"
-              className="object-cover w-full h-full rounded-2xl"
-              style={{width: '100vw', maxWidth: '100vw', height: '100%', maxHeight: '100%'}} 
-              draggable={false}
-            />
-              {/* Navigation buttons exactly as in ProjectsScroll */}
-              <button
-                onClick={handlePrev}
-                className={`absolute ${isMobile ? 'left-1' : 'left-4'} top-1/2 -translate-y-1/2 rounded-full flex items-center justify-center z-30 transition-opacity duration-200 ${isMobile ? 'p-2 bg-transparent' : 'p-2 bg-black/40 hover:bg-black/60'}`}
-                tabIndex={0}
-                aria-label="Previous Images"
-              >
-                <svg width={isMobile ? 28 : 32} height={isMobile ? 28 : 32} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
-              </button>
-              <button
-                onClick={handleNext}
-                className={`absolute ${isMobile ? 'right-3' : 'right-4'} top-1/2 -translate-y-1/2 rounded-full flex items-center justify-center z-10 transition-opacity duration-200 ${isMobile ? 'bg-transparent' : 'p-2 bg-black/40 hover:bg-black/60'}`}
-                tabIndex={0}
-                aria-label="Next Images"
-              >
-                <svg width={isMobile ? 28 : 32} height={isMobile ? 28 : 32} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
-              </button>
-          </div>
-          <div className="flex justify-center mt-4 gap-2">
-            {solarImages.map((_, idx) => (
-              <button
-                key={idx}
-                className={`w-3 h-3 rounded-full ${activeIndex === idx ? 'bg-primary' : 'bg-gray-300'} transition-all`}
-                onClick={() => setActiveIndex(idx)}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
-          </div>
+      <div className="w-full relative">
+        <div className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden flex items-center justify-center" style={{maxWidth: '100vw'}}>
+          <img
+            ref={imageRef}
+            src={solarImages[activeIndex]}
+            alt={t('solarScroll.title')}
+            className="object-cover w-full h-full rounded-2xl"
+            style={{width: '100vw', maxWidth: '100vw', height: '100%', maxHeight: '100%'}} 
+            draggable={false}
+          />
+          {/* Navigation buttons exactly as in ProjectsScroll */}
+          <button
+            onClick={handlePrev}
+            className={`absolute ${isMobile ? 'left-1' : 'left-4'} top-1/2 -translate-y-1/2 rounded-full flex items-center justify-center z-30 transition-opacity duration-200 ${isMobile ? 'p-2 bg-transparent' : 'p-2 bg-black/40 hover:bg-black/60'}`}
+            tabIndex={0}
+            aria-label={t('projectsScroll.prev', 'Previous Images')}
+          >
+            <svg width={isMobile ? 28 : 32} height={isMobile ? 28 : 32} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
+          </button>
+          <button
+            onClick={handleNext}
+            className={`absolute ${isMobile ? 'right-3' : 'right-4'} top-1/2 -translate-y-1/2 rounded-full flex items-center justify-center z-10 transition-opacity duration-200 ${isMobile ? 'bg-transparent' : 'p-2 bg-black/40 hover:bg-black/60'}`}
+            tabIndex={0}
+            aria-label={t('projectsScroll.next', 'Next Images')}
+          >
+            <svg width={isMobile ? 28 : 32} height={isMobile ? 28 : 32} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
+          </button>
         </div>
+        <div className="flex justify-center mt-4 gap-2">
+          {solarImages.map((_, idx) => (
+            <button
+              key={idx}
+              className={`w-3 h-3 rounded-full ${activeIndex === idx ? 'bg-primary' : 'bg-gray-300'} transition-all`}
+              onClick={() => setActiveIndex(idx)}
+              aria-label={t('projectsScroll.goto', { number: idx + 1, defaultValue: `Go to slide ${idx + 1}` })}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
