@@ -1,12 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Play } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
-import InlineQuoteForm from '@/components/quote/InlineQuoteForm';
-
+import { useTranslation } from 'react-i18next';
 const ConstructionHero = () => {
   const [loaded, setLoaded] = useState(false);
-  const { content } = useLanguage();
+  const { t } = useTranslation();
 
   useEffect(() => {
     setLoaded(true);
@@ -72,8 +68,8 @@ const ConstructionHero = () => {
                       loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                     }`}
                   >
-                    <span className="block text-white drop-shadow-lg lg:py-1">{content.hero.title.split(' ').slice(0, 2).join(' ')}</span>
-                    <span className="block text-white drop-shadow-lg lg:py-1">{content.hero.title.split(' ').slice(2).join(' ')}</span>
+                    <span className="block text-white drop-shadow-lg lg:py-1">{t('hero.titleFirstLine')}</span>
+                    <span className="block text-white drop-shadow-lg lg:py-1">{t('hero.titleSecondLine')}</span>
                   </h1>
                 </div>
                 {/* Subtitle */}
@@ -82,7 +78,7 @@ const ConstructionHero = () => {
                     loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                   }`}
                 >
-                  {content.hero.subtitle}
+                  {t('hero.subtitle')}
                 </p>
               </div>
             </div>

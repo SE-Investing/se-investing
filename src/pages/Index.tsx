@@ -1,21 +1,19 @@
 
-import ConstructionBackground from "@/components/background/ConstructionBackground";
 import ModernNavigation from "@/components/navigation/ModernNavigation";
 import ConstructionHero from "@/components/hero/ConstructionHero";
-import ServicesSection from "@/components/sections/ServicesSection";
-import ServiceCard1 from "@/components/sections/ServiceCard1";
 import ServiceCard2 from "@/components/sections/ServiceCard2";
 import ProjectsScroll from "@/components/sections/ProjectsScroll";
 import SolarScroll from "@/components/sections/SolarScroll";
 import Footer from "@/components/sections/Footer";
 import WorkWithUs from "@/components/sections/WorkWithUs";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import SustainabilitySection from "@/components/sections/SustainabilitySection";
-import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const teamPhotoRef = useRef<HTMLImageElement>(null);
+  const { t } = useTranslation();
 
   // Hide .eapps-widget-toolbar-panel-share-block when it appears
   useHideShareBlock();
@@ -28,10 +26,10 @@ const Index = () => {
         </div>
         <section id="about" className="max-w-7xl mx-auto px-4 sm:px-6 py-4 md:py-12">
           <div className="w-full md:px-16 md:py-16">
-            <h2 className="text-4xl md:text-5xl font-light mb-2 md:mb-8 text-left drop-shadow-lg w-full md:text-center">Perchè affidarci un nuovo lavoro?</h2>
-            <p className="font-bold text-xl font-normal mb-2 text-[#7c6714] text-left w-full md:text-center text-justify tracking-tighter">SE Investing raggruppa due decenni di esperienze nel settore delle costruzioni e delle tecnologie garantendo professionalità costi chiari e tempi certi.</p>
+            <h2 className="text-4xl md:text-5xl font-light mb-2 md:mb-8 text-left drop-shadow-lg w-full md:text-center">{t('about.title')}</h2>
+            <p className="font-bold text-xl font-normal mb-2 text-[#7c6714] text-left w-full md:text-center text-justify tracking-tighter">{t('about.subtitle')}</p>
             <p className="text-gray-800 text-lg leading-relaxed text-justify [word-spacing:-1.5px] w-full font-extralight">
-              In un settore ricco di insidie come quello delle infrastrutture e tecnologie ci tieniamo a distinguersi per correttezza e trasparenza.
+              {t('about.text')}
             </p>
           </div>
         </section>
@@ -41,10 +39,10 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center sm:mb-4 md:mb-6">
               <h2 className="text-4xl md:text-4xl font-light mb-6 mt-8 text-[#7c6714] drop-shadow-lg ">
-                Progettazione e studi di fattibilità
+                {t('solarScroll.title')}
               </h2>
               <h3 className="font-light text-gray-600 mb-3 text-base md:text-xl max-w-4xl mx-auto text-justify">
-                Mettiamo in campo competenze e innovazione nel settore delle tecnologie per la transizione energetica, decarbonizzazione e gestione integrata dei rifiuti. Dalla fattibilità alla progettazione fino alla messa in opera.
+                {t('solarScroll.subtitle')}
               </h3>
             </div>
           </div>

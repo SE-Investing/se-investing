@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 const ServicesSection = () => {
   // Responsive check (mobile/desktop)
@@ -9,7 +9,7 @@ const ServicesSection = () => {
     window.addEventListener('resize', check);
     return () => window.removeEventListener('resize', check);
   }, []);
-  const { content } = useLanguage();
+  const { t } = useTranslation();
   // Modal logic removed
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -52,9 +52,9 @@ const ServicesSection = () => {
               {isMobile ? (
                 <>
                   <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full px-4">
-                    <h3 className="text-4xl md:text-4xl font-light mb-4 mt-2 text-[#7c6714] drop-shadow-lg">Progettazione e studi di fattibilità</h3>
+                    <h3 className="text-4xl md:text-4xl font-light mb-4 mt-2 text-[#7c6714] drop-shadow-lg">{t('servicesSection.card1.title')}</h3>
                     <div className="text-gray-800 text-justify [word-spacing:-1.5px] text-lg leading-relaxed text-left w-full">
-                      <p className="mb-2 text-justify">Mettiamo in campo competenze e innovazione nel settore delle tecnologie per la transizione energetica, decarbonizzazione e gestione integrata dei rifiuti. Dalla fattibilità alla progettazione fino alla messa in opera.</p>
+                      <p className="mb-2 text-justify">{t('servicesSection.card1.text')}</p>
                     </div>
                   </div>
                   <div className="w-full h-48 flex items-center mt-2">
@@ -77,9 +77,9 @@ const ServicesSection = () => {
                     />
                   </div>
                   <div className="flex-1 flex flex-col justify-top items-start text-left mt-24 z-10 h-full px-4">
-                    <h3 className="text-4xl md:text-4xl font-light mb-4 mt-2 text-[#7c6714] drop-shadow-lg">Progettazione e studi di fattibilità</h3>
+                    <h3 className="text-4xl md:text-4xl font-light mb-4 mt-2 text-[#7c6714] drop-shadow-lg">{t('servicesSection.card1.title')}</h3>
                     <div className="text-gray-800 text-justify [word-spacing:-1.5px] text-lg leading-relaxed text-left w-full">
-                      <p className="mb-2 text-justify">Mettiamo in campo competenze e innovazione nel settore delle tecnologie per la transizione energetica, decarbonizzazione e gestione integrata dei rifiuti. Dalla fattibilità alla progettazione fino alla messa in opera.</p>
+                      <p className="mb-2 text-justify">{t('servicesSection.card1.text')}</p>
                     </div>
                   </div>
                 </>
@@ -92,9 +92,9 @@ const ServicesSection = () => {
               {isMobile ? (
                 <>
                   <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full px-4">
-                    <h2 className="mt-2 text-4xl md:text-4xl text-left font-light mb-4 text-[#7c6714] drop-shadow-lg">Efficienza e organizzazione tramite digitale</h2>
+                    <h2 className="mt-2 text-4xl md:text-4xl text-left font-light mb-4 text-[#7c6714] drop-shadow-lg">{t('servicesSection.card2.title')}</h2>
                     <div className="text-gray-800 text-lg leading-relaxed text-justify [word-spacing:-1.5px] w-full font-extralight mb-2">
-                      <p className="mb-2 text-justify">Grazie ad un apposito sistema informatico AI interno interconnesso con gli hardware di cantiere possiamo tenere traccia delle lavorazioni quotidiane, tenere aggiornato il cliente anche a distanza tramite condivisione cloud facilitare il controllo di gestione e individuare eventuali scostamenti rispetto al cronoprogramma.</p>
+                      <p className="mb-2 text-justify">{t('servicesSection.card2.text')}</p>
                     </div>
                   </div>
                   <div className="w-full h-48 flex items-center mt-2">
@@ -117,9 +117,9 @@ const ServicesSection = () => {
                     />
                   </div>
                   <div className="flex-1 flex flex-col justify-center items-start text-left z-10 h-full px-4">
-                    <h2 className="mt-2 text-4xl md:text-4xl text-left font-light mb-4 text-[#7c6714] drop-shadow-lg">Efficienza e organizzazione tramite digitale</h2>
+                    <h2 className="mt-2 text-4xl md:text-4xl text-left font-light mb-4 text-[#7c6714] drop-shadow-lg">{t('servicesSection.card2.title')}</h2>
                     <div className="text-gray-800 text-lg leading-relaxed text-justify [word-spacing:-1.5px] w-full font-extralight mb-2">
-                      <p className="mb-2 text-justify">Grazie ad un apposito sistema informatico AI interno interconnesso con gli hardware di cantiere possiamo tenere traccia delle lavorazioni quotidiane, tenere aggiornato il cliente anche a distanza tramite condivisione cloud facilitare il controllo di gestione e individuare eventuali scostamenti rispetto al cronoprogramma.</p>
+                      <p className="mb-2 text-justify">{t('servicesSection.card2.text')}</p>
                     </div>
                   </div>
                 </>

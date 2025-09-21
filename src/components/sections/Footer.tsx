@@ -1,9 +1,9 @@
 import React from 'react';
 import { Building2, Mail, Phone, MapPin, Instagram } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
-  const { content } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <footer className="bg-[#141414] text-background py-6" id="contact">
@@ -13,25 +13,25 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
                 <span className="text-xl font-bold">
-                  {content.footer.company}
+                  {t('footer.company')}
                 </span>
             </div>
           </div>
 
           {/* Contact Info */}
           <div id="contact" className="space-y-4">
-            <h3 className="text-lg font-semibold">{content.footer.contactTitle}</h3>
+            <h3 className="text-lg font-semibold">{t('footer.contactTitle')}</h3>
             <div className="space-y-3">
               <div className="flex items-top space-x-2">
                 <MapPin className="h-5 w-5 pt-1 text-background/80" />
-                <span className="text-background/80">{content.footer.address}</span>
+                <span className="text-background/80">{t('footer.address')}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-background/80">{content.footer.registration}</span>
+                <span className="text-background/80">{t('footer.registration')}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-background/80" />
-                <span className="text-background/80">{content.footer.email}</span>
+                <span className="text-background/80">{t('footer.email')}</span>
               </div>
             </div>
           </div>
@@ -40,18 +40,16 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-background/20 mt-12 pt-8 text-center">
           <p className="text-background/60">
-            {typeof content.footer.copyright === 'string'
-              ? (() => {
-                  let copyright = content.footer.copyright.replace(
-                    'Sintija Birgele',
-                    '<a href="https://de.linkedin.com/in/sintija-birgele" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;">Sintija Birgele</a>'
-                  );
-                  if (copyright.includes('SCS')) {
-                    copyright = copyright.replace(/SCS/, '<span style="font-size:0.75rem;vertical-align:bottom;margin-left:2px;">SCS</span>');
-                  }
-                  return <span dangerouslySetInnerHTML={{ __html: copyright }} />;
-                })()
-              : content.footer.copyright}
+            {(() => {
+              const copyright = t('footer.copyright');
+              const name = 'Sintija Birgele';
+              const url = 'https://de.linkedin.com/in/sintija-birgele';
+              if (copyright.includes(name)) {
+                const [before, after] = copyright.split(name);
+                return <span>{before}<a href={url} target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">{name}</a>{after}</span>;
+              }
+              return copyright;
+            })()}
           </p>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { useLanguage } from "@/contexts/LanguageContext";
 import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
+import { useTranslation } from "react-i18next";
 // Helper to get all images in a folder (publicassets/*)
 const assetFolders = ["builders", "commercial", "maintenance", "roofing", "underfloor"];
 const assetImages: Record<string, { src: string; title: string }[]> = {
@@ -13,23 +13,23 @@ const assetImages: Record<string, { src: string; title: string }[]> = {
     { src: "assets/construction/brasil/jvilla quinta das lagoas.jpg", title: "2011, Villa Quinta das Lagoas Casa" },
     { src: "assets/construction/brasil/vitacimirim obra.jpg", title: "2013, complexo residencial girassol (128 apartamentos)" },
   ],
-  "construction/villette a sierra - Villaggia La Suerte - Tenerife": [
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (1).jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (2).jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (3).jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (4).jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (5).jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (6).jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (7).jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM.jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.27 AM (2).jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.27 AM (3).jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.27 AM (4).jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.27 AM (5).jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.27 AM.jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM (1).jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM (2).jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM.jpeg", title: "Villette A Sierra - Villaggia La Suerte - Tenerife" },
+  "construction/Urbanizacion un posto al sole Tenerife": [
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (1).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (2).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (3).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (4).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (5).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (6).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM (7).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.26 AM.jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.27 AM (2).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.27 AM (3).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.27 AM (4).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.27 AM (5).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.27 AM.jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM (1).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM (2).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM.jpeg", title: "Urbanizacion un posto al sole Tenerife" },
     { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2009, condomínio misto (residencial comercial) Porta do Sol com 21 unidades.jpeg", title: "2009, condomínio misto (residencial comercial) Porta do Sol com 21 unidades, 15 unidades residenciais e unidades comerciais" },
     { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2011, vila quinta das lagoas casa 2.jpeg", title: "Vila Quinta Das Lagoas Casa 2" },
     { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2011, vila quinta das lagoas casa.jpeg", title: "Vila Quinta Das Lagoas Casa" },
@@ -40,16 +40,18 @@ const assetImages: Record<string, { src: string; title: string }[]> = {
 };
 
 function getFolderFromImagePath(imagePath: string) {
-  // Remove leading './' if present, then match everything between 'assets/' and the last '/' before the filename, including subfolders
+  // Defensive: check if imagePath is a string
+  if (typeof imagePath !== 'string') return null;
   const normalized = imagePath.replace(/^\.\//, "");
   const match = normalized.match(/^assets\/((?:[^/]+\/)*[^/]+)\//);
   return match ? match[1] : null;
 }
 
 const ProjectsScroll = () => {
-  const { content } = useLanguage();
-  const projectsScroll = content.projectsScroll;
-  const projects = projectsScroll?.projects || [];
+  const { t } = useTranslation();
+  // Get projects from i18n locale using t with returnObjects: true
+  let projects = t('projectsScroll.projects', { returnObjects: true });
+  if (!Array.isArray(projects)) projects = [];
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   // Show all projects, no filtering
@@ -241,7 +243,7 @@ const ProjectsScroll = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center sm:mb-4 md:mb-6">
             <h2 className="text-4xl md:text-4xl font-light mb-6 mt-8 text-[#7c6714] drop-shadow-lg ">
-              {projectsScroll?.title || 'Our Projects'}
+              {t('projectsScroll.title')}
             </h2>
           </div>
         </div>
@@ -274,7 +276,7 @@ const ProjectsScroll = () => {
                       <>
                         <div className="absolute top-6 left-6 z-10">
                           <Badge variant="default" className="mb-4 w-fit flex items-center gap-1 pl-2 pr-1">
-                            <span>Completato</span>
+                            <span>{t('badge.completed', 'Completato')}</span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="22"
