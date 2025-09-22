@@ -22,17 +22,13 @@ const Footer = () => {
           <div id="contact" className="space-y-4">
             <h3 className="text-lg font-semibold">{t('footer.contactTitle')}</h3>
             <div className="space-y-3">
-              <div className="flex items-top space-x-2">
-                <MapPin className="h-5 w-5 pt-1 text-background/80" />
-                <span className="text-background/80">{t('footer.address')}</span>
-              </div>
               <div className="flex items-center space-x-2">
                 <span className="text-background/80">{t('footer.registration')}</span>
               </div>
-              <div className="flex items-center space-x-2">
+              {/* <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-background/80" />
                 <span className="text-background/80">{t('footer.email')}</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
