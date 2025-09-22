@@ -249,7 +249,7 @@ const ProjectsScroll = () => {
         </div>
       </div>
       <div
-        className="fixed left-0 right-0 bg-gradient-to-b from-background/90 to-muted/50 flex flex-col justify-center w-full px-4 md:px-24"
+        className="fixed left-0 right-0 bg-gradient-to-b from-background/90 to-muted/50 flex flex-col justify-center w-full md:px-24"
         style={{ width: '100vw', position: 'relative' }}
         ref={containerRef}
       >
