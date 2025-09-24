@@ -30,12 +30,12 @@ const assetImages: Record<string, { src: string; title: string }[]> = {
     { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM (1).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
     { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM (2).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
     { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/WhatsApp Image 2025-09-16 at 12.54.28 AM.jpeg", title: "Urbanizacion un posto al sole Tenerife" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2009, condomínio misto (residencial comercial) Porta do Sol com 21 unidades.jpeg", title: "Tenerife, condomínio misto (residencial comercial) Porta do Sol com 21 unidades, 15 unidades residenciais e unidades comerciais" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2011, vila quinta das lagoas casa 2.jpeg", title: "Tenerife, Vila Quinta Das Lagoas Casa" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2011, vila quinta das lagoas casa.jpeg", title: "Tenerife, Vila Quinta Das Lagoas Casa" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2013, complexo residencial girassol (128 apartamentos).jpeg", title: "Tenerife, Complexo Residencial Girassol (128 Apartamentos)" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2017, condomínio misto buganvila (14 unidade residencial e 11 unidades comercial).jpeg", title: "Tenerife, Condomínio Misto Buganvila (14 Unità Residencial e 11 Unità Commercial)" },
-    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/5: 2018 residencial Aloha ville, (6 unidades residenciais).jpeg", title: "Residencial Aloha Ville (6 Unità Residenciais)" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2009, condomínio misto (residencial comercial) Porta do Sol com 21 unidades.jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2011, vila quinta das lagoas casa 2.jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2011, vila quinta das lagoas casa.jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2013, complexo residencial girassol (128 apartamentos).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/2017, condomínio misto buganvila (14 unidade residencial e 11 unidades comercial).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
+    { src: "assets/construction/villette a sierra - Villaggia La Suerte - Tenerife/5: 2018 residencial Aloha ville, (6 unidades residenciais).jpeg", title: "Urbanizacion un posto al sole Tenerife" },
   ],
 };
 
