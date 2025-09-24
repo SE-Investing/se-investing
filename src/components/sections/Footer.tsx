@@ -25,10 +25,10 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <span className="text-background/80">{t('footer.registration')}</span>
               </div>
-              {/* <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-background/80" />
                 <span className="text-background/80">{t('footer.email')}</span>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
