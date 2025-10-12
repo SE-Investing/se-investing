@@ -38,9 +38,9 @@ const ModernNavigation = () => {
   };
 
   const navigationItems = [
-    { key: "projects", label: t('navigation.projects'), href: '/se-investing/#projects' },
-    { key: "about", label: t('navigation.about'), href: '/se-investing/#about' },
-    { key: "contact", label: t('navigation.contact'), href: '/se-investing/#contact'},
+    { key: "projects", label: t('navigation.projects'), href: '/#projects' },
+    { key: "about", label: t('navigation.about'), href: '/#about' },
+    { key: "contact", label: t('navigation.contact'), href: '/#contact'},
   ];
   // Language switcher flags
   const languages = [
