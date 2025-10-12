@@ -81,7 +81,7 @@ const ModernNavigation = () => {
               ))}
             </div>
           </div>
-
+          <div className="md:hidden flex items-center space-x-1 mr-2">
           {/* Mobile Menu Button */}
           {languages.map((lang) => (
             <button
@@ -89,12 +89,13 @@ const ModernNavigation = () => {
               onClick={() => {
                 i18n.changeLanguage(lang.code);
               }}
-              className={`text-xl px-1 md:hidden focus:outline-none ${i18n.language === lang.code ? 'opacity-100' : 'opacity-60 hover:opacity-100'}`}
+              className={`text-xl px-1 focus:outline-none ${i18n.language === lang.code ? 'opacity-100' : 'opacity-60 hover:opacity-100'}`}
               aria-label={lang.label}
             >
               <span>{lang.flag}</span>
             </button>
           ))}
+          </div>
         </div>
       </div>
     </nav>
