@@ -242,7 +242,7 @@ const ProjectsScroll = () => {
       <div className="bg-background sm:py-2 z-40 border-b border-border shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center sm:mb-4 md:mb-6">
-            <h2 className="text-4xl md:text-4xl font-light mb-6 mt-8 text-[#7c6714] drop-shadow-lg ">
+            <h2 className="text-4xl md:text-4xl font-light mb-6 text-[#7c6714] drop-shadow-lg ">
               {t('projectsScroll.title')}
             </h2>
           </div>

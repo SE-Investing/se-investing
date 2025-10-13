@@ -46,7 +46,7 @@ const SolarScroll = () => {
   };
 
   return (
-    <section id="solar-projects" className="w-full flex flex-col items-center justify-center pb-8">
+    <section id="solar-projects" className="w-full flex flex-col items-center justify-center pb-4">
       <div className="w-full relative">
         <div className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden flex items-center justify-center" style={{maxWidth: '100vw'}}>
           <img

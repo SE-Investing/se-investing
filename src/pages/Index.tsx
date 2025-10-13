@@ -26,9 +26,9 @@ const Index = () => {
         </div>
         <section id="about" className="max-w-7xl mx-auto px-4 sm:px-6 py-4 md:py-12">
           <div className="w-full md:px-16 md:py-16">
-            <h2 className="text-4xl md:text-5xl font-light mb-2 md:mb-8 text-left drop-shadow-lg w-full md:text-center">{t('about.title')}</h2>
-            <p className="font-bold text-xl font-normal mb-2 text-[#7c6714] text-left w-full md:text-center text-justify tracking-tighter">{t('about.subtitle')}</p>
-            <p className="text-gray-800 text-lg leading-relaxed text-justify [word-spacing:-1.5px] w-full font-extralight">
+            <h2 className="text-4xl md:text-5xl font-light mb-2 md:mb-8 drop-shadow-lg w-full text-center">{t('about.title')}</h2>
+            <p className="font-bold text-xl font-normal mb-2 text-[#7c6714] text-left w-full md:text-center text-justify md:text-center tracking-tighter">{t('about.subtitle')}</p>
+            <p className="text-gray-800 text-lg leading-relaxed text-justify md:text-center [word-spacing:-1.5px] w-full font-extralight">
               {t('about.text')}
             </p>
           </div>
