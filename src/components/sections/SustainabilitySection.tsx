@@ -56,7 +56,7 @@ const SustainabilitySection = () => {
         </div>
       </div>
       {/* Mobile heading only */}
-      <div className="sm:hidden w-full flex justify-center items-center">
+      <div className="sm:hidden w-full flex justify-left items-center">
         <h3 className="text-3xl md:text-4xl font-light md:mb-6 text-[#7c6714] drop-shadow-lg px-4 pt-2" style={{marginTop: '24px'}}>
           {t('sustainabilitySection.title')}
         </h3>
