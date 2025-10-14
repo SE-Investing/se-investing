@@ -7,7 +7,6 @@ const solarImages = [
   "assets/construction/solar/WhatsApp Image 2025-09-18 at 1.59.49 AM.jpeg",
   "assets/construction/solar/WhatsApp Image 2025-09-18 at 2.01.04 AM.jpeg",
   "assets/construction/solar/WhatsApp Image 2025-09-18 at 2.00.05 AM.jpeg",
-  "assets/construction/solar/WhatsApp Image 2025-09-18 at 2.03.10 AM.jpeg",
   "assets/construction/solar/WhatsApp Image 2025-09-18 at 2.00.50 AM.jpeg"
 ];
 
@@ -46,7 +45,7 @@ const SolarScroll = () => {
   };
 
   return (
-    <section id="solar-projects" className="w-full flex flex-col items-center justify-center pb-4">
+    <section id="solar-projects" className="w-full flex flex-col items-center justify-center pb-4 md:px-24">
       <div className="w-full relative">
         <div className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden flex items-center justify-center" style={{maxWidth: '100vw'}}>
           <img
