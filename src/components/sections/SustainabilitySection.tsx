@@ -49,7 +49,7 @@ const SustainabilitySection = () => {
         <svg viewBox="1050 0 140 180" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-0 left-0 w-full h-full">
           <path d="M0,80 C90,110 60,0 1440,90 L10940,0 L0,0 Z" fill="#ffffffff" />
         </svg>
-        <div className="absolute inset-0 flex mt-10 justify-center items-center h-full">
+        <div className="absolute inset-0 flex mt-10 justify-left md:justify-center items-center h-full">
           <h3 className="text-4xl font-light text-[#7c6714] leading-tight z-10 text-left px-4" style={{marginTop: '32px'}}>
             {t('sustainabilitySection.title')}
           </h3>
