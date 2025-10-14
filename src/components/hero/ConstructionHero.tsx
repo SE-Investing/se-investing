@@ -74,7 +74,7 @@ const ConstructionHero = () => {
                 </div>
                 {/* Subtitle */}
                 <p 
-                  className={`text-xl sm:text-2xl text-white/90 max-w-2xl leading-relaxed drop-shadow font-light transform transition-all duration-700 delay-200 text-left ${
+                  className={`text-3xl md:text-xl text-white/90 max-w-2xl leading-relaxed drop-shadow font-medium md:font-light transform transition-all duration-700 delay-200 text-left ${
                     loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                   }`}
                 >
