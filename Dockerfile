@@ -8,9 +8,6 @@ WORKDIR /app
 # Copy package.json
 COPY package.json ./
 
-# Copy pnpm-lock.yaml if it exists (ignore if missing)
-RUN if [ -f pnpm-lock.yaml ]; then echo "Lockfile exists"; else touch pnpm-lock.yaml; fi
-COPY pnpm-lock.yaml ./
 
 # Install pnpm
 RUN npm install -g pnpm
